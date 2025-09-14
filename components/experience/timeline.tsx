@@ -39,6 +39,19 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
 
   return (
     <div className="space-y-4">
+      {/* Download Resume Button */}
+      <a
+        href="/resume.pdf"
+        download
+        target="_blank"
+        rel="noopener noreferrer"
+        className="inline-block mb-4"
+      >
+        <Button variant="default" className="rounded-lg">
+          Download Resume
+        </Button>
+      </a>
+      
       {sortedExperiences.map((experience, index) => (
         <AnimatedSection
           key={experience.id}
@@ -109,8 +122,17 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
           </div>
         </AnimatedSection>
       ))}
-    </div>
-  );
-};
+
+    {/* PDF Preview BELOW the experience cards */}
+    <iframe
+      src="/resume.pdf"
+      width="100%"
+      height="600"
+      style={{ border: "1px solid #ccc", marginTop: "1rem" }}
+      title="Resume PDF Preview"
+    />
+  </div>
+); // closes the return
+}   // <-- Add this line to close the component
 
 export default Timeline;

@@ -38,13 +38,6 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           </Button>
         </Link>
       </div>
-      <div className="absolute bottom-4 right-4 p-3 rounded-full bg-background border border-border">
-        {project.type === "Personal" ? (
-          <Icons.userFill className="h-4 w-4" />
-        ) : (
-          <Icons.work className="h-4 w-4" />
-        )}
-      </div>
     </div>
   );
 }

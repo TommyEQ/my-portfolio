@@ -60,7 +60,20 @@ export type ValidSkills =
   | "FastAPI"
   | "SQL"
   | "NoSQL"
-  | "Framer Motion";
+  | "DFM"
+  | "DFA"
+  | "Rapid Prototyping"
+  | "Creo PTC"
+  | "Metal Part Design"
+  | "Plastic Part Design"
+  | "3D Printing Slicing Software"
+  | "Onshape"
+  | "Excel"
+  | "Statistical Analysis"
+  | "Ansys"
+  | "Matlab"
+  | "Revit"
+  | "SolidWorks";
 
 export type ValidCategory =
   | "Full Stack"
@@ -69,7 +82,13 @@ export type ValidCategory =
   | "UI/UX"
   | "Web Dev"
   | "Mobile Dev"
-  | "3D Modeling";
+  | "Manufacturing"
+  | "3D Printing"
+  | "FEA"
+  | "Electronic Design"
+  | "3D Modeling"
+  | "Simulation"
+  | "Rapid Prototyping";
 
 export type ValidExpType = "Personal" | "Professional";
 

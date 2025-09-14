@@ -10,7 +10,7 @@ import CustomTooltip from "@/components/ui/custom-tooltip";
 import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
-import profileImg from "@/public/profile-img.jpg";
+import profileImg from "@/public/Headshot.jpeg";
 
 interface ProjectPageProps {
   params: {
@@ -47,27 +47,11 @@ export default function Project({ params }: ProjectPageProps) {
         </time>
         <h1 className="flex items-center justify-between mt-2 font-heading text-4xl leading-tight lg:text-5xl">
           {project.companyName}
-          <div className="flex items-center">
-            {project.githubLink && (
-              <CustomTooltip text="Link to the source code.">
-                <Link href={project.githubLink} target="_blank">
-                  <Icons.gitHub className="w-6 ml-4 text-muted-foreground hover:text-foreground" />
-                </Link>
-              </CustomTooltip>
-            )}
-            {project.websiteLink && (
-              <CustomTooltip text="Please note that some project links may be temporarily unavailable.">
-                <Link href={project.websiteLink} target="_blank">
-                  <Icons.externalLink className="w-6 ml-4 text-muted-foreground hover:text-foreground " />
-                </Link>
-              </CustomTooltip>
-            )}
-          </div>
         </h1>
         <ChipContainer textArr={project.category} />
         <div className="mt-4 flex space-x-4">
           <Link
-            href={siteConfig.links.github}
+            href={siteConfig.links.linkedin}
             className="flex items-center space-x-2 text-sm"
           >
             <Image
@@ -79,7 +63,7 @@ export default function Project({ params }: ProjectPageProps) {
             />
 
             <div className="flex-1 text-left leading-tight">
-              <p className="font-medium">{"Naman Barkiya"}</p>
+              <p className="font-medium">{"Tomas Quesada"}</p>
               <p className="text-[12px] text-muted-foreground">
                 @{siteConfig.username}
               </p>
@@ -93,16 +77,11 @@ export default function Project({ params }: ProjectPageProps) {
         alt={project.companyName}
         width={720}
         height={405}
-        className="my-8 rounded-md border bg-muted transition-colors"
+        className="my-8 rounded-lg border bg-muted transition-colors"
         priority
       />
 
-      <div className="mb-7 ">
-        <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
-          Tech Stack
-        </h2>
-        <ChipContainer textArr={project.techStack} />
-      </div>
+
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
@@ -117,29 +96,33 @@ export default function Project({ params }: ProjectPageProps) {
 
       <div className="mb-7 ">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-          Page Info
+          Pictures
         </h2>
-        {project.pagesInfoArr.map((page, ind) => (
-          <div key={ind}>
-            <h3 className="flex items-center font-heading text-xl leading-tight lg:text-xl mt-3">
-              <Icons.star className="h-5 w-5 mr-2" /> {page.title}
-            </h3>
-            <div>
-              <p>{page.description}</p>
-              {page.imgArr.map((img, ind) => (
-                <Image
-                  src={img}
-                  key={ind}
-                  alt={img}
-                  width={720}
-                  height={405}
-                  className="my-4 rounded-md border bg-muted transition-colors"
-                  priority
-                />
-              ))}
-            </div>
-          </div>
-        ))}
+          {project.pagesInfoArr[0].imgArr.map((media, ind) =>
+  media.endsWith(".mov") ? (
+    <video
+      key={ind}
+      src={media}
+      autoPlay
+      muted
+      loop
+      playsInline
+      width={720}
+      height={405}
+      className="my-4 rounded-lg border bg-muted transition-colors"
+    />
+  ) : (
+    <Image
+      src={media}
+      key={ind}
+      alt={media}
+      width={720}
+      height={405}
+      className="my-4 rounded-lg border bg-muted transition-colors"
+      priority
+    />
+  )
+)}
       </div>
 
       <hr className="mt-12" />

@@ -5,157 +5,171 @@ export interface skillsInterface {
   description: string;
   rating: number;
   icon: any;
+  category: string; // <-- Add this line
 }
 
 export const skillsUnsorted: skillsInterface[] = [
   {
-    name: "Next.js",
+    name: "SolidWorks",
     description:
-      "Effortlessly build dynamic apps with routing, layouts, loading UI, and API routes.",
+      "3D CAD software used for parametric modeling, assemblies, and detailed engineering drawings.",
     rating: 5,
-    icon: Icons.nextjs,
+    icon: Icons.solidworks,
+    category: "Software"
   },
   {
-    name: "React",
+    name: "Matlab",
     description:
-      "Craft interactive user interfaces using components, state, props, and virtual DOM.",
-    rating: 5,
-    icon: Icons.react,
-  },
-  {
-    name: "GraphQL",
-    description:
-      "Fetch data precisely with a powerful query language for APIs and runtime execution.",
+      "Computational software for numerical analysis, simulation, data processing, and visualization.",
     rating: 4,
-    icon: Icons.graphql,
+    icon: Icons.matlab,
+    category: "Software"
   },
   {
-    name: "Nest.js",
+    name: "Ansys",
     description:
-      "Create scalable and modular applications with a progressive Node.js framework.",
+      "Finite element analysis software for simulating and analyzing mechanical designs.",
     rating: 4,
-    icon: Icons.nestjs,
+    icon: Icons.ansys,
+    category: "Software"
   },
   {
-    name: "express.js",
+    name: "Onshape",
     description:
-      "Build web applications and APIs quickly using a fast, unopinionated Node.js framework.",
+      "Cloud-based CAD platform for collaborative design, version control, and product development.",
     rating: 5,
-    icon: Icons.express,
+    icon: Icons.onshape,
+    category: "Software"
   },
   {
-    name: "Node.js",
+    name: "Autodesk Fusion",
     description:
-      "Run JavaScript on the server side, enabling dynamic and responsive applications.",
-    rating: 5,
-    icon: Icons.nodejs,
-  },
-  {
-    name: "MongoDB",
-    description:
-      "Store and retrieve data seamlessly with a flexible and scalable NoSQL database.",
-    rating: 5,
-    icon: Icons.mongodb,
-  },
-  {
-    name: "Typescript",
-    description:
-      "Enhance JavaScript with static types, making code more understandable and reliable.",
-    rating: 5,
-    icon: Icons.typescript,
-  },
-  {
-    name: "Javascript",
-    description:
-      "Create interactive and dynamic web experiences with the versatile scripting language.",
-    rating: 5,
-    icon: Icons.javascript,
-  },
-  {
-    name: "HTML 5",
-    description:
-      "Structure web content beautifully with the latest version of HyperText Markup Language.",
+      "Integrated CAD/CAM/CAE tool for design, simulation, and manufacturing workflows.",
     rating: 4,
-    icon: Icons.html5,
+    icon: Icons.fusion,
+    category: "Software"
   },
   {
-    name: "CSS 3",
+    name: "CATIA",
     description:
-      "Style web pages creatively with the latest iteration of Cascading Style Sheets.",
-    rating: 4,
-    icon: Icons.css3,
+      "CAD software for complex surface modeling, product design, and engineering.",
+    rating: 2,
+    icon: Icons.solidworks,
+    category: "Software"
   },
   {
-    name: "React Native",
+    name: "Creo Parametric",
     description:
-      "Develop cross-platform mobile apps using React for consistent and engaging experiences.",
-    rating: 4,
-    icon: Icons.react,
+      "Parametric 3D CAD software for mechanical design, assemblies, and simulation.",
+    rating: 2,
+    icon: Icons.creo,
+    category: "Software"
   },
   {
-    name: "Angular",
+    name: "Python",
     description:
-      "Build dynamic web apps with a TypeScript-based open-source framework by Google.",
+      "Programming language for automation, data analysis, machine learning, and scripting.",
+    rating: 1,
+    icon: Icons.python,
+    category: "Software"
+  },
+  {
+    name: "Arduino IDE",
+    description:
+      "Programming environment for developing and uploading code to Arduino microcontrollers.",
     rating: 3,
-    icon: Icons.angular,
+    icon: Icons.arduino,
+    category: "Software"
   },
   {
-    name: "Redux",
+    name: "3D Printing Slicing Software",
     description:
-      "Manage app state effectively using a predictable and centralized state container.",
+      "Tools (e.g., BambuLabs, PrusaSlicer) that convert CAD models into machine instructions for additive manufacturing.",
+    rating: 5,
+    icon: Icons.bambulabs,
+    category: "Software"
+  },
+  {
+    name: "Excel",
+    description:
+      "Spreadsheet software for data analysis, engineering calculations, and visualization.",
     rating: 4,
-    icon: Icons.redux,
+    icon: Icons.excel,
+    category: "Software"
   },
   {
-    name: "Socket.io",
+    name: "Minitab",
     description:
-      "Enable real-time, bidirectional communication between clients and servers effortlessly.",
+      "Statistical software for data analysis, process improvement, and Six Sigma projects.",
+    rating: 4,
+    icon: Icons.minitab,
+    category: "Software"
+  },
+  {
+    name: "Siemens NX",
+    description:
+      "Advanced CAD/CAM/CAE software for product design, simulation, and manufacturing.",
+    rating: 4,
+    icon: Icons.siemens,
+    category: "Software"
+  },
+    {
+    name: "DFM / DFA",
+    description:
+      "Design for Manufacturability and Assembly, optimizing designs to reduce cost, complexity, and production time.",
+    rating: 5,
+    icon: Icons.factory,
+    category: "Design & Manufacturing"
+  },
+      {
+    name: "GD&T",
+    description:
+      "Geometric Dimensioning and Tolerancing, a system for defining and communicating engineering tolerances.",
+    rating: 5,
+    icon: Icons.ruler,
+    category: "Design & Manufacturing"
+  },
+        {
+    name: "Rapid Prototyping",
+    description:
+      "Fast fabrication of physical models using 3D printing and other quick-turn processes.",
+    rating: 5,
+    icon: Icons.zap,
+    category: "Design & Manufacturing"
+  },
+  {
+    name: "Statistical Tolerance Analysis",
+    description:
+      "Quantitative approach for predicting how part variations impact assembly performance.",
     rating: 3,
-    icon: Icons.socketio,
+    icon: Icons.chart,
+    category: "Design & Manufacturing"
   },
-  {
-    name: "Material UI",
+    {
+    name: "Design of Experiments (DOE)",
     description:
-      "Create stunning and responsive UIs with a popular React UI framework.",
+      "Statistical method for planning and analyzing controlled tests to understand variable effects.",
     rating: 4,
-    icon: Icons.mui,
+    icon: Icons.flask,
+    category: "Design & Manufacturing"
+  },
+    {
+    name: "Plastic Part Design",
+    description:
+      "Specialized design methods for injection-molded and additively manufactured polymer parts.",
+    rating: 3,
+    icon: Icons.plastic,
+    category: "Design & Manufacturing"
+  },
+      {
+    name: "Metal Part Design",
+    description:
+      "Mechanical design and analysis of sheet metal, machined, and cast components.",
+    rating: 3,
+    icon: Icons.cog,
+    category: "Design & Manufacturing"
   },
 
-  {
-    name: "Tailwind CSS",
-    description:
-      "Design beautiful, modern websites faster with a utility-first CSS framework.",
-    rating: 5,
-    icon: Icons.tailwindcss,
-  },
-  {
-    name: "AWS",
-    description:
-      "Utilize Amazon Web Services to build and deploy scalable, reliable, and secure applications.",
-    rating: 3,
-    icon: Icons.amazonaws,
-  },
-  {
-    name: "Bootstrap",
-    description:
-      "Quickly create responsive and appealing web designs using a popular CSS framework.",
-    rating: 2,
-    icon: Icons.bootstrap,
-  },
-  {
-    name: "MySQL",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 2,
-    icon: Icons.mysql,
-  },
-  {
-    name: "Netlify",
-    description:
-      "Manage and organize relational databases efficiently for data-driven applications.",
-    rating: 4,
-    icon: Icons.netlify,
-  },
 ];
 
 export const skills = skillsUnsorted

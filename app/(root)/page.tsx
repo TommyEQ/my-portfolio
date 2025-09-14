@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Script from "next/script";
+import SkillsPreview from "@/components/skills/skillspreview";
 
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
@@ -19,15 +20,17 @@ import { featuredProjects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { featuredSkills } from "@/config/skills";
 import { cn } from "@/lib/utils";
-import profileImg from "@/public/profile-img.jpg";
+import profileImg from "@/public/Headshot.jpeg";
 
 export const metadata: Metadata = {
-  title: `${pagesConfig.home.metadata.title} | Modern Next.js Developer Portfolio Template`,
-  description: `${pagesConfig.home.metadata.description} This open-source Next.js portfolio template is customizable to showcase your skills and projects.`,
+  title: pagesConfig.home.metadata.title,  // just "Home"
+  description: `${pagesConfig.home.metadata.description} This portfolio is customizable to showcase your skills and projects.`,
   alternates: {
     canonical: siteConfig.url,
   },
 };
+
+
 
 export default function IndexPage() {
   // Structured data for personal portfolio
@@ -38,7 +41,7 @@ export default function IndexPage() {
     url: siteConfig.url,
     image: siteConfig.ogImage,
     jobTitle: "Full Stack Developer",
-    sameAs: [siteConfig.links.github, siteConfig.links.twitter],
+    sameAs: [siteConfig.links.linkedin],
   };
 
   // Structured data for website as a software application (template)
@@ -81,7 +84,7 @@ export default function IndexPage() {
             width={100}
             sizes="100vw"
             className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Naman Barkiya - Full Stack Developer Portfolio"
+            alt="Tomas Quesada - Mechanical Engineer Portfolio"
             priority
           />
           <AnimatedText
@@ -89,31 +92,30 @@ export default function IndexPage() {
             delay={0.2}
             className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
           >
-            Naman Barkiya
+            Tomas Quesada
           </AnimatedText>
           <AnimatedText
             as="h3"
             delay={0.4}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
-            Full Stack Developer
+            Mechanical Engineer
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Open-source Next.js portfolio template. Fork this on GitHub to
-              create your own developer portfolio.
+              Welcome to my portfolio! Here you’ll find a selection of my mechanical engineering projects, highlighting my experience in design, analysis, and hands-on prototyping.
             </p>
           </div>
 
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
               <Link
-                href={"https://github.com/namanbarkiya"}
+                href={siteConfig.links.linkedin}
                 target="_blank"
                 className={cn(buttonVariants({ size: "lg" }))}
-                aria-label="View Naman Barkiya's GitHub profile"
+                aria-label="View Tomas Quesada's LinkedIn profile"
               >
-                <Icons.gitHub className="w-4 h-4 mr-2" /> GitHub
+                <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
               </Link>
             </AnimatedText>
             <AnimatedText delay={0.8}>
@@ -126,7 +128,7 @@ export default function IndexPage() {
                     size: "lg",
                   })
                 )}
-                aria-label="Contact Naman Barkiya"
+                aria-label="Contact Tomas Quesada"
               >
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>
@@ -156,7 +158,7 @@ export default function IndexPage() {
             {pagesConfig.skills.description}
           </AnimatedText>
         </div>
-        <SkillsCard skills={featuredSkills} />
+        <SkillsPreview />
         <AnimatedText delay={0.4} className="flex justify-center">
           <Link href="/skills">
             <Button variant={"outline"} className="rounded-xl">
@@ -209,6 +211,7 @@ export default function IndexPage() {
                     </p>
                 </div> */}
       </AnimatedSection>
+      {/* 
       <AnimatedSection
         direction="down"
         className="container space-y-6 bg-muted py-10 my-14"
@@ -240,6 +243,7 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
+      */}
       <AnimatedSection
         direction="left"
         className="container space-y-6 py-10 my-14"

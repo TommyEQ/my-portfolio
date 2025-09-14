@@ -11,12 +11,25 @@ export const metadata: Metadata = {
 };
 
 export default function SkillsPage() {
+  // Group skills by category
+  const skillsByCategory = skills.reduce<Record<string, typeof skills>>((acc, skill) => {
+    if (!acc[skill.category]) acc[skill.category] = [];
+    acc[skill.category].push(skill);
+    return acc;
+  }, {});
+
   return (
     <PageContainer
       title={pagesConfig.skills.title}
       description={pagesConfig.skills.description}
     >
-      <SkillsCard skills={skills} />
+      {Object.entries(skillsByCategory).map(([category, skills]) => (
+        <section key={category} style={{ marginBottom: "2rem" }}>
+          <h2 style={{ fontSize: "1.25rem", fontWeight: "bold", marginBottom: "0.5rem" }}>{category}</h2>
+          <hr style={{ marginBottom: "1.5rem" }} />
+          <SkillsCard skills={skills} />
+        </section>
+      ))}
     </PageContainer>
   );
 }
