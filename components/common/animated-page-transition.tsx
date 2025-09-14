@@ -1,11 +1,14 @@
 "use client";
 
-import { motion, Variants } from "framer-motion";
+import { motion, Variants, Transition, Easing } from "framer-motion";
 import { ReactNode } from "react";
 
 interface ClientPageWrapperProps {
   children: ReactNode;
 }
+
+// Define easing as Easing type
+const ease: Easing = "easeInOut";
 
 const pageVariants: Variants = {
   initial: {
@@ -17,16 +20,16 @@ const pageVariants: Variants = {
     y: 0,
     transition: {
       duration: 0.5,
-      ease: "easeInOut", // ✅ valid string literal
-    },
+      ease, // ✅ now typed correctly
+    } as Transition,
   },
   exit: {
     opacity: 0,
     y: 20,
     transition: {
       duration: 0.5,
-      ease: "easeInOut", // ✅ valid string literal
-    },
+      ease,
+    } as Transition,
   },
 };
 
