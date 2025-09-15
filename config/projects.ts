@@ -234,32 +234,38 @@ export const Projects: ProjectInterface[] = [
   },
 
   {
-    id: "garden",
-    companyName: "All-season Indoor Garden",
-    type: "Professional",
-    category: ["3D Modeling", "Analysis"],
+    id: "lattice",
+    companyName: "Lattice Optimization",
+    type: "Personal",
+    category: ["3D Modeling", "Analysis", "FEA"],
     shortDescription:
-      "Supported the development of Sage, an all-season indoor garden, by standardizing fasteners, improving water management, and prototyping hydroponics components.",
-    startDate: new Date("2022-08-01"),
-    endDate: new Date("2022-12-15"),
-    companyLogoImg: "/projects/garden/garden1.jpg",
+      "Optimized a robot component with nTop by applying lattice structures and FEA validation, achieving weight reduction while maintaining structural integrity.",
+    startDate: new Date("2025-04-01"),
+    endDate: new Date("2025-4-15"),
+    companyLogoImg: "/projects/lattice/lattice0.jpg",
     pagesInfoArr: [
       {
         imgArr: [
-        "/projects/garden/garden2.jpg",
+        "/projects/lattice/lattice8.jpg",
+        "/projects/lattice/lattice1.jpg",
+        "/projects/lattice/lattice6.jpg",
+        "/projects/lattice/lattice3.jpg",
+        "/projects/lattice/lattice7.jpg",
+        "/projects/lattice/lattice4.jpg",
+        "/projects/lattice/lattice5.jpg",
       ],
       title: "Landing Page"
     }
   ],
   descriptionDetails: {
     paragraphs: [
-      "Interned with the Innovation Studios team at GE Appliances to support the development of Sage, an all-season indoor garden that integrates refrigeration with a hydroponics system. The product featured a rotating mechanism for multi-wall plant growth and a built-in watering and nutrient delivery system. My contributions focused on improving manufacturability, water management, and prototype development to support concept refinement.",
+      "As part of a design exploration, I used nTop to optimize a structural robot component by replacing solid geometry with lattice structures. The goal was to reduce weight while maintaining structural performance. I compared two lattice types (Gyroid and Body-Centered Cubic) against the original solid part, applying finite element analysis (FEA) to validate performance. This project strengthened my skills in DfAM, topology optimization, and structural validation, while teaching me the trade-offs between mass reduction and stress distribution in advanced designs.",
     ],
     bullets: [
-      "Standardized fastener selection, reducing part complexity and streamlining assembly.",
-      "Improved the water management system to enhance root control and reduce clogging.",
-      "Designed and fabricated prototypes to test structural durability and hydroponic performance.",
-      "Collaborated with cross-functional design and engineering teams within the Innovation Studios group.",
+      "Optimized a robot component in nTop with lattice structures, reducing weight by over 60%.",
+      "Validated designs through FEA simulations, ensuring structural performance.",
+      "Integrated SolidWorks, nTop, and FEA tools for a seamless design workflow.",
+      "Applied DfAM principles to balance lightweighting with manufacturability.",
     ],
     },
   },
