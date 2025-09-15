@@ -242,7 +242,7 @@ export const Projects: ProjectInterface[] = [
       "Optimized a robot component with nTop by applying lattice structures and FEA validation, achieving weight reduction while maintaining structural integrity.",
     startDate: new Date("2025-04-01"),
     endDate: new Date("2025-4-15"),
-    companyLogoImg: "/projects/lattice/lattice0.jpg",
+    companyLogoImg: "/projects/lattice/lattice1.jpg",
     pagesInfoArr: [
       {
         imgArr: [
