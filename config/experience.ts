@@ -23,7 +23,7 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2024-08-01"),
     endDate: "Present",
     description: [
-      "Mechanical engineering intern in the Marine Department at Garmin, contributing to the design, testing, and validation of GPS and marine electronics products. Gaining hands-on experience in the intersection of mechanical design, materials testing, and industrial product development.",
+      "Mechanical engineer in the Marine Department at Garmin, contributing to the design, testing, and validation of GPS and marine electronics products. Gaining hands-on experience in the intersection of mechanical design, materials testing, and industrial product development.",
 
     ],
     achievements: [
@@ -41,7 +41,7 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2022-08-01"),
     endDate: new Date("2025-06-01"),
     description: [
-      "During my time at Penn State, I worked under Dr. Xiaogang Hu in the Neuromechanics Laboratory, where I designed and prototyped a prosthetic hand using soft materials. The research focused on developing a cost-effective prosthetic hand that maintained ease of manufacturability while improving durability through extended cyclic testing.",
+      "At Penn State, I worked under Dr. Xiaogang Hu in the Neuromechanics Laboratory, where I designed and prototyped a prosthetic hand using soft materials. The research focused on developing a cost-effective prosthetic hand that maintained ease of manufacturability while improving durability through extended cyclic testing.",
     ],
     achievements: [
       "Designed and prototyped a multi-material 3D-printed robotic hand using TPU, with enhanced manufacturability and durability.",
@@ -62,7 +62,7 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2024-05-01"),
     endDate: new Date("2024-08-01"),
     description: [
-      "During my time at Garmin, I worked in the Marine Department, where I helped develop and validate test fixtures for actuator testing. I collaborated with the Industrial Design team on product development and performed FEA simulations to ensure sufficient structural strength. One of the components I designed followed plastic injection molding principles for manufacturability.",
+      "Developed and validated actuator test fixtures in Garmin’s Marine Department, collaborating with the Industrial Design team and performing FEA simulations to confirm structural strength. Designed components with plastic injection molding principles to balance durability and manufacturability.",
     ],
     achievements: [
       "Designed motor mounts for a live sonar scanner using Onshape, increasing the FOS by 25% from previous designs.",
@@ -82,7 +82,7 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2023-05-01"),
     endDate: new Date("2023-08-01"),
     description: [
-      "During my time at Carnegie Robotics, I contributed to DARPA’s Robotic Autonomy in Complex Environments with Resiliency (RACER) program, assisting with the structural design of a treaded autonomous vehicle capable of off-road navigation.",
+      "At Carnegie Robotics, I supported DARPA’s Robotic Autonomy in Complex Environments with Resiliency (RACER) program by assisting with the structural design of a treaded autonomous vehicle capable of resilient off-road navigation.",
     ],
     achievements: [
       "Designed and manufactured electronic component enclosures, panels, mounts, and casings for off-road autonomous vehicles, LiDAR sensors, and stereo cameras using SolidWorks.",
@@ -101,7 +101,7 @@ export const experiences: ExperienceInterface[] = [
     startDate: new Date("2021-08-01"),
     endDate: new Date("2021-12-01"),
     description: [
-      "During my time at GE Appliances, I worked with the Innovation Department, where I rapidly prototyped potential products in the indoor farming market. My role involved daily prototyping, developing concepts, and creating detailed CAD designs.",
+      "At GE Appliances, I worked with the Innovation Department to rapidly prototype potential products in the indoor farming market, developing concepts and creating detailed CAD designs to support early-stage product development.",
     ],
     achievements: [
       "Managed nozzle evaluation testing and lowered liquid system usage by 30% for the GE Sage, All Season Indoor Garden",
