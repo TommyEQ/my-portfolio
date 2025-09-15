@@ -115,7 +115,7 @@ export const experiences: ExperienceInterface[] = [
       "Excel",
     ],
     companyUrl: "https://www.geappliances.com",
-    logo: "/GELogo.png",
+    logo: "/gelogo.png",
   },
     {
     id: "burn",
