@@ -63,6 +63,42 @@ export const Projects: ProjectInterface[] = [
   },
 },
   {
+  id: "streaming-device",
+  companyName: "Gaming Streaming Device",
+  type: "Personal",
+  category: ["3D Modeling", "Manufacturing"],
+  shortDescription:
+    "Designed and 3D printed a custom enclosure for a Raspberry Pi 3-based gaming streaming device",
+  startDate: new Date("2025-11-01"),
+  endDate: new Date("2023-11-03"),
+  companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
+  pagesInfoArr: [
+    {
+      imgArr: [
+        "/projects/asme-hpv/asme1.png",
+        "/projects/asme-hpv/asme2.jpg",
+        "/projects/asme-hpv/asme3.jpg",
+        "/projects/asme-hpv/asme4.jpg",
+        "/projects/asme-hpv/asme5.jpeg",
+        "/projects/asme-hpv/asme6.jpg",
+        "/projects/asme-hpv/asme7.jpg",
+      ],
+      title: "Landing Page"
+    }
+  ],
+  descriptionDetails: {
+    paragraphs: [
+      "A major focus of this build was refining my design aesthetics, drawing inspiration from 1980s retro analog devices",
+    ],
+    bullets: [
+      "Included ample ports for quick setup and play
+      "Integrated rubber feet to support two stable configurations",
+      "Added ventilation for improved cooling and cable clips for better organization",
+      "Programmed the Raspberry Pi to run Sunshine and Moonlight for seamless game streaming",
+    ],
+  },
+},
+  {
     id: "betsy",
     companyName: "Autonomous Maze Navigation Robot",
     type: "Professional",
