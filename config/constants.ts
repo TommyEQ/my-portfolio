@@ -96,6 +96,7 @@ export type ValidCategory =
   | "Autonomous Systems"
   | "Computer Vision"
   | "Mechanical Design"
+  | "Internship"
   | "Product Design";
 
 export type ValidExpType = "Personal" | "Professional";
