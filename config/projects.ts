@@ -344,14 +344,14 @@ export const Projects: ProjectInterface[] = [
   startDate: new Date("2023-05-01"),
   endDate: new Date("2023-08-01"),
 
-  companyLogoImg: "/projects/cr/crg1.jpg",
+  companyLogoImg: "/projects/cr/cr1.webp",
 
   pagesInfoArr: [
     {
       title: "Landing Page",
       imgArr: [
-        "/projects/cr/crg1.jpg",
-        "/projects/cr/crg2.jpg",
+        "/projects/cr/cr1.webp",
+        "/projects/cr/cr2.webp",
       ],
     },
   ],
