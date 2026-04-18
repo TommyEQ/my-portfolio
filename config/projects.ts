@@ -111,7 +111,44 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+{
+    id: "case",
+    companyName: "Custom Modular PC Case",
+    type: "Personal",
+    category: ["3D Modeling", "3D Printing", "Simulation"],
+    shortDescription:
+      "Designed and prototyped a portable modular PC case using aluminum extrusions and 3D-printed parts.",
 
+    startDate: new Date("2025-04-20"),
+    endDate: new Date("2025-05-10"),
+
+    companyLogoImg: "/projects/case/case2.png",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/case/case2.mov",
+          "/projects/case/case4.jpg",
+          "/projects/case/case3.mov",
+          "/projects/case/case5.jpeg",
+          "/projects/case/case6.jpeg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Designed a modular PC case focused on portability and thermal performance using CFD validation.",
+      ],
+      bullets: [
+        "Designed modular aluminum extrusion frame.",
+        "Used ABS/ASA 3D printing for structural components.",
+        "Performed CFD simulation for airflow optimization.",
+        "Iterated for manufacturability and assembly.",
+      ],
+    },
+  },
   {
     id: "rocket",
     companyName: "Saturn V Model Rocket",
@@ -221,44 +258,6 @@ export const Projects: ProjectInterface[] = [
     },
   },
 
-  {
-    id: "case",
-    companyName: "Custom Modular PC Case",
-    type: "Personal",
-    category: ["3D Modeling", "3D Printing", "Simulation"],
-    shortDescription:
-      "Designed and prototyped a portable modular PC case using aluminum extrusions and 3D-printed parts.",
-
-    startDate: new Date("2025-04-20"),
-    endDate: new Date("2025-05-10"),
-
-    companyLogoImg: "/projects/case/case2.png",
-
-    pagesInfoArr: [
-      {
-        imgArr: [
-          "/projects/case/case2.mov",
-          "/projects/case/case4.jpg",
-          "/projects/case/case3.mov",
-          "/projects/case/case5.jpeg",
-          "/projects/case/case6.jpeg",
-        ],
-        title: "Landing Page",
-      },
-    ],
-
-    descriptionDetails: {
-      paragraphs: [
-        "Designed a modular PC case focused on portability and thermal performance using CFD validation.",
-      ],
-      bullets: [
-        "Designed modular aluminum extrusion frame.",
-        "Used ABS/ASA 3D printing for structural components.",
-        "Performed CFD simulation for airflow optimization.",
-        "Iterated for manufacturability and assembly.",
-      ],
-    },
-  },
 
   {
     id: "crutch",
