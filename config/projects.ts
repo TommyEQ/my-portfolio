@@ -33,7 +33,7 @@ export const Projects: ProjectInterface[] = [
   {
     id: "robox",
     companyName: "Autonomous RoboMaster Competition Robot",
-    type: "School",
+    type: "Professional",
     category: ["Robotics", "Autonomous Systems", "Computer Vision", "Mechanical Design"],
     shortDescription:
       "Served as mechanical lead for a RoboMaster-style autonomous competition robot, responsible for the design, fabrication, and integration of the full mechanical system. Led development of a modular robotic platform optimized for stability, maneuverability, and sensor integration.",
