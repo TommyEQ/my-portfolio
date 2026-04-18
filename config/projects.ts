@@ -150,6 +150,43 @@ export const Projects: ProjectInterface[] = [
     },
   },
   {
+  id: "wood-coaster-holder",
+  companyName: "Wood Coaster Holder",
+  type: "Personal",
+  category: ["Manufacturing", "Product Design", "Rapid Prototyping"],
+
+  shortDescription:
+    "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
+
+  startDate: new Date("2026-04-01"),
+  endDate: new Date("2026-04-15"),
+
+  companyLogoImg: "/projects/coaster/Coaster1.webp",
+
+  pagesInfoArr: [
+    {
+      title: "Landing Page",
+      imgArr: [
+        "/projects/coaster/Coaster1.webp",
+        "/projects/coaster/Coaster2.webp",
+        "/projects/coaster/Coaster3.webp",
+        "/projects/coaster/Coaster4.webp",
+      ],
+    },
+  ],
+
+  descriptionDetails: {
+    paragraphs: [
+      "Quick personal woodworking project focused on learning basic fabrication and producing a functional wooden coaster holder.",
+    ],
+    bullets: [
+      "Designed in SolidWorks with simple joinery concepts.",
+      "Fabricated using hardwood and basic woodworking tools.",
+      "Completed rapid end-to-end prototype build from design to final part.",
+    ],
+  },
+},
+  {
     id: "rocket",
     companyName: "Saturn V Model Rocket",
     type: "Professional",
