@@ -332,12 +332,62 @@ export const Projects: ProjectInterface[] = [
       ],
     },
   },
+{
+  id: "carnegie-racer",
+  companyName: "DARPA RACER Heavy Platform)",
+  type: "Professional",
+  category: ["Internship", "Robotics", "Autonomous Systems", "FEA", "Mechanical Design"],
 
+  shortDescription:
+    "Supported mechanical design and hardware integration for the DARPA RACER off-road autonomous vehicle program.",
+
+  startDate: new Date("2023-05-01"),
+  endDate: new Date("2023-08-01"),
+
+  companyLogoImg: "/projects/cr/crg1.jpg",
+
+  pagesInfoArr: [
+    {
+      title: "Landing Page",
+      imgArr: [
+        "/projects/cr/crg1.jpg",
+        "/projects/cr/crg2.jpg",
+      ],
+    },
+  ],
+
+  descriptionDetails: {
+    paragraphs: [
+      "During my time as a mechanical engineering intern at Carnegie Robotics I supported the DARPA RACER program, contributing to the design and integration of hardware systems for autonomous tracked vehicles operating in off-road and high-impact environments. Work focused on ensuring mechanical robustness and reliable sensor integration under real-world conditions.",
+    ],
+
+    bullets: [
+      "Designed mechanical integration of LiDAR and stereo camera systems on a DARPA-funded autonomous tracked vehicle, including mounts, shielding, and interface constraints.",
+      "Supported field testing under real-world terrain and impact conditions, validating structural integrity and identifying failure modes in sensor mounts.",
+      "Designed and fabricated enclosures and mounting systems for autonomous platforms using SolidWorks, supporting multidisciplinary hardware integration.",
+    ],
+  },
+},
+
+  descriptionDetails: {
+    paragraphs: [
+      "Mechanical engineering intern at Carnegie Robotics supporting development efforts for the DARPA RACER (Rapid Autonomous Complex Environment Response) program. Worked on design and validation of mechanical subsystems for autonomous off-road vehicles operating in high-impact, unstructured terrain environments.",
+    ],
+
+    bullets: [
+      "Supported mechanical design and packaging of autonomy hardware for off-road robotic platforms.",
+      "Contributed to CAD development and iteration of structural mounting solutions for sensors and compute systems.",
+      "Collaborated with autonomy and perception teams to ensure mechanical layouts supported sensor line-of-sight and vibration constraints.",
+      "Assisted in design validation through simulation and design-for-rugged-environment considerations.",
+      "Gained exposure to full-stack autonomous vehicle development in a DARPA program environment.",
+    ],
+  },
+},
   {
     id: "garden",
     companyName: "All-season Indoor Garden",
     type: "Professional",
-    category: ["3D Modeling", "Analysis"],
+    category: ["3D Modeling", "Analysis", "Internship"],
     shortDescription:
       "Supported hydroponic indoor garden development and system optimization.",
 
