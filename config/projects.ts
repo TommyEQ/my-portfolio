@@ -16,7 +16,7 @@ export interface ProjectInterface {
   type: ValidExpType;
   companyName: string;
   category: ValidCategory[];
-  shortDescription: string; 
+  shortDescription: string;
   startDate: Date;
   endDate: Date;
   companyLogoImg: any;
@@ -25,182 +25,41 @@ export interface ProjectInterface {
 }
 
 export const Projects: ProjectInterface[] = [
-{
-  id: "asme-hpv",
-  companyName: "ASME Human Powered Vehicle",
-  type: "Professional",
-  category: ["3D Modeling", "Manufacturing", "FEA"],
-  shortDescription:
-    "Designed and built a pedal-driven vehicle for the ASME competition, focusing on CAD/FEA and fabrication.",
-  startDate: new Date("2023-07-01"),
-  endDate: new Date("2023-07-01"),
-  companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
-  pagesInfoArr: [
-    {
-      imgArr: [
-        "/projects/asme-hpv/asme1.png",
-        "/projects/asme-hpv/asme2.jpg",
-        "/projects/asme-hpv/asme3.jpg",
-        "/projects/asme-hpv/asme4.jpg",
-        "/projects/asme-hpv/asme5.jpeg",
-        "/projects/asme-hpv/asme6.jpg",
-        "/projects/asme-hpv/asme7.jpg",
-      ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "Collaborated with a senior design team to engineer and manufacture a pedal-driven vehicle that met ASME competition guidelines. My role focused on CAD/FEA, structural optimization, and hands-on fabrication to deliver a competition-ready prototype.",
-    ],
-    bullets: [
-      "Led CAD modeling and finite element analysis (SolidWorks) to optimize frame strength and reduce weight.",
-      "Fabricated components using aluminum and steel tubing, applying MIG welding, lathes, tube bending, and drill presses.",
-      "Conducted safety, steering, and braking tests to ensure reliability and compliance.",
-      "Coordinated with teammates on project management, design reviews, and sponsor deliverables.",
-      "Strengthened expertise in CAD/FEA, hands-on manufacturing, and design validation through end-to-end development.",
-    ],
-  },
-},
+
+  // =========================
+  // 🏆 MOST IMPRESSIVE FIRST
+  // =========================
+
   {
-  id: "streaming-device",
-  companyName: "Gaming Streaming Device",
-  type: "Personal",
-  category: ["3D Modeling", "Manufacturing"],
-  shortDescription:
-    "Designed and 3D printed a custom enclosure for a Raspberry Pi 3-based gaming streaming device",
-  startDate: new Date("2025-11-01"),
-  endDate: new Date("2023-11-03"),
-  companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
-  pagesInfoArr: [
-    {
-      imgArr: [
-        "/projects/asme-hpv/asme1.png",
-        "/projects/asme-hpv/asme2.jpg",
-        "/projects/asme-hpv/asme3.jpg",
-        "/projects/asme-hpv/asme4.jpg",
-        "/projects/asme-hpv/asme5.jpeg",
-        "/projects/asme-hpv/asme6.jpg",
-        "/projects/asme-hpv/asme7.jpg",
-      ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "A major focus of this build was refining my design aesthetics, drawing inspiration from 1980s retro analog devices",
-    ],
-    bullets: [
-  "Included ample ports for quick setup and play",
-  "Integrated rubber feet to support two stable configurations",
-  "Added ventilation for improved cooling and cable clips for better organization",
-  "Programmed the Raspberry Pi to run Sunshine and Moonlight for seamless game streaming",
-],
-  },
-},
-  {
-    id: "betsy",
-    companyName: "Autonomous Maze Navigation Robot",
-    type: "Professional",
-    category: ["3D Modeling", "3D Printing", "Electronic Design"],
+    id: "robox",
+    companyName: "Autonomous RoboMaster Competition Robot",
+    type: "School",
+    category: ["Robotics", "Autonomous Systems", "Computer Vision", "Mechanical Design"],
     shortDescription:
-      "Developed an autonomous robot capable of navigating a randomized maze and collecting tennis balls.",
-    startDate: new Date("2024-04-20"),
-    endDate: new Date("2024-05-10"),
-    companyLogoImg: "/projects/betsy/betsy1.jpeg",
+      "Served as mechanical lead for a RoboMaster-style autonomous competition robot, responsible for the design, fabrication, and integration of the full mechanical system. Led development of a modular robotic platform optimized for stability, maneuverability, and sensor integration.",
+
+    startDate: new Date("2024-08-01"),
+    endDate: new Date("2025-05-01"),
+
+    companyLogoImg: "/projects/robox/placeholder.jpg",
+
     pagesInfoArr: [
       {
-        imgArr: [
-        "/projects/betsy/betsy2.mov",
-        "/projects/betsy/betsy4.jpg",
-        "/projects/betsy/betsy3.mov",
-        "/projects/betsy/betsy5.jpeg",
-        "/projects/betsy/betsy6.jpeg",
+        imgArr: ["/projects/robox/placeholder.jpg"],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Served as mechanical lead for a RoboMaster-style autonomous competition robot, responsible for the design, fabrication, and integration of the full mechanical system. Led development of a modular robotic platform optimized for stability, maneuverability, and sensor integration, while coordinating closely with electrical and software sub-teams.",
       ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "As part of a multidisciplinary team project, I contributed to the design and development of an autonomous vehicle capable of navigating a randomly configured maze and collecting tennis balls under competition constraints. The robot combined mechanical design, electrical integration, and advanced computer vision, resulting in a highly customized system that demonstrated the ability to adapt to uncertain environments. This project allowed me to merge hardware and software expertise, work through real-world system integration challenges, and explore strategies for improving autonomous navigation in complex spaces.",
-    ],
-    bullets: [
-      "Designed and fabricated a custom tank chassis powered by a 20V battery system with voltage regulation for stable performance.",
-      "Integrated Nvidia mini-PC, Intel RealSense camera, and LiDAR for depth sensing and spatial mapping.",
-      "Implemented a YOLO-based object detection system to identify and collect tennis balls.",
-      "Combined LiDAR and depth data for dynamic navigation and adaptive decision-making.",
-      "Addressed maze navigation challenges, gaining experience in wall-following algorithms and system optimization.",
-    ],
-  },
-  },
-  {
-    id: "rocket",
-    companyName: "Saturn V Model Rocket",
-    type: "Professional",
-    category: ["3D Modeling", "3D Printing", "Simulation"],
-    shortDescription:
-      "Designed, prototyped, and tested a functional model rocket inspired by the Saturn V.",
-    startDate: new Date("2024-04-20"),
-    endDate: new Date("2024-05-10"),
-    companyLogoImg: "/projects/rocket/rocket0.jpg",
-    pagesInfoArr: [
-      {
-        imgArr: [
-        "/projects/rocket/rocket1.mov",
-        "/projects/rocket/rocket2.jpeg",
-        "/projects/rocket/rocket3.jpg",
-        "/projects/rocket/rocket4.jpg",
-        "/projects/rocket/rocket5.jpeg",
+      bullets: [
+        "Led mechanical design and fabrication of the robot chassis, optimizing for rigidity, weight distribution, and modular subsystem integration.",
+        "Coordinated cross-functional integration with electrical and software teams to ensure sensor placement and system reliability.",
+        "Iterated designs based on testing feedback to improve durability and competition performance.",
       ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "Designed, prototyped, and tested a functional model rocket inspired by the Saturn V. The project involved developing multiple subsystems, performing stability and flight analyses, and validating performance through real-world launches. This hands-on experience combined CAD, simulation, and rapid prototyping to deliver a reliable design.",
-    ],
-    bullets: [
-      "Developed subsystems including a spy camera mount, nose cone, booster, motor mount, and launch lug mount.",
-      "Calculated stability caliber for a D12-3 engine, achieving a value of 1.64 for improved flight stability.",
-      "Utilized OpenRocket to analyze fin and body design, optimizing performance to reach an altitude of 80 meters.",
-      "Conducted test launches in Penn State agricultural fields and iterated design based on collected data.",
-      "Produced detailed engineering drawings to communicate design and manufacturing requirements.",
-    ],
-  },
-  },
-  {
-    id: "crutch",
-    companyName: "CrutchMate: Adaptive Crutch Accessory",
-    type: "Professional",
-    category: ["3D Modeling", "3D Printing", "Rapid Prototyping"],
-    shortDescription:
-      "Developed an adaptive crutch accessory to enhance mobility and user comfort.",
-    startDate: new Date("2024-09-16"),
-    endDate: new Date("2024-09-23"),
-    companyLogoImg: "/projects/crutch/crutch1.jpg",
-    pagesInfoArr: [
-      {
-        imgArr: [
-        "/projects/crutch/crutch2.jpg",
-        "/projects/crutch/crutch4.jpg",
-        "/projects/crutch/crutch3.jpg",
-        "/projects/crutch/crutch5.jpg",
-      ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "Developed a 3D-printed crutch attachment system designed to improve usability and convenience for daily crutch users. The modular design allows crutches to magnetically snap together for easier handling, while interchangeable attachments (e.g., suction cup, hook, or cup holder) provide versatile functionality in different settings.",
-    ],
-    bullets: [
-      "Designed and prototyped a modular add-on system compatible with standard crutches using CAD and 3D printing.",
-      "Integrated neodymium magnets to enable secure crutch pairing and attachment swapping.",
-      "Created interchangeable modules, including a suction cup for wall support, hook for hanging, and cup holder for accessibility.",
-      "Conducted prototyping and iterative testing to refine usability and durability of components.",
-      "Completed as a one-week design sprint for a university design course, balancing speed with functionality.",
-    ],
-  },
+    },
   },
 
   {
@@ -210,32 +69,253 @@ export const Projects: ProjectInterface[] = [
     category: ["3D Modeling", "3D Printing", "Simulation"],
     shortDescription:
       "Designed and prototyped a portable, modular PC case using aluminum extrusions and ABS/ASA 3D-printed parts.",
+
     startDate: new Date("2025-04-20"),
     endDate: new Date("2025-05-10"),
+
     companyLogoImg: "/projects/case/case2.png",
+
     pagesInfoArr: [
       {
         imgArr: [
-        "/projects/case/case2.mov",
-        "/projects/case/case4.jpg",
-        "/projects/case/case3.mov",
-        "/projects/case/case5.jpeg",
-        "/projects/case/case6.jpeg",
+          "/projects/case/case2.mov",
+          "/projects/case/case4.jpg",
+          "/projects/case/case3.mov",
+          "/projects/case/case5.jpeg",
+          "/projects/case/case6.jpeg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Designed and prototyped a fully custom PC case focused on portability, modularity, and thermal performance using aluminum extrusion framing and 3D-printed components. CFD simulations in SolidWorks were used to validate airflow prior to fabrication.",
       ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "Designed and prototyped a fully custom PC case as a replacement for an aging commercial chassis. The design emphasized portability, modularity, and optimized cooling performance, leveraging aluminum extrusions for structural support and ABS/ASA 3D-printed components for thermal resilience. Computational Fluid Dynamics (CFD) simulations in SolidWorks were used to validate airflow configurations prior to fabrication.",
-    ],
-    bullets: [
-      "Designed a portable, modular PC case from the ground up with a focus on airflow and thermal management.",
-      "Utilized aluminum extrusions for the frame and ABS/ASA 3D-printed parts to balance strength, weight, and heat resistance.",
-      "Performed SolidWorks CFD simulations to identify and confirm optimal cooling configurations.",
-      "Iterated design for manufacturability and assembly, preparing for physical build and testing.",
-    ],
+      bullets: [
+        "Designed a portable modular PC case with optimized airflow and thermal management.",
+        "Used aluminum extrusions and ABS/ASA 3D-printed parts for structural and thermal performance.",
+        "Performed CFD simulation in SolidWorks to validate cooling design.",
+        "Iterated for manufacturability and assembly readiness.",
+      ],
+    },
   },
+
+  {
+    id: "betsy",
+    companyName: "Autonomous Maze Navigation Robot",
+    type: "Professional",
+    category: ["3D Modeling", "3D Printing", "Electronic Design"],
+    shortDescription:
+      "Developed an autonomous robot capable of navigating a randomized maze and collecting tennis balls.",
+
+    startDate: new Date("2024-04-20"),
+    endDate: new Date("2024-05-10"),
+
+    companyLogoImg: "/projects/betsy/betsy1.jpeg",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/betsy/betsy2.mov",
+          "/projects/betsy/betsy4.jpg",
+          "/projects/betsy/betsy3.mov",
+          "/projects/betsy/betsy5.jpeg",
+          "/projects/betsy/betsy6.jpeg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Developed an autonomous robot integrating mechanical design, computer vision, and sensor fusion for maze navigation and object collection in a dynamic environment.",
+      ],
+      bullets: [
+        "Designed tank chassis powered by regulated 20V system.",
+        "Integrated Nvidia compute unit, RealSense camera, and LiDAR for perception.",
+        "Implemented YOLO-based object detection for tennis ball collection.",
+        "Combined LiDAR + depth sensing for autonomous navigation.",
+        "Improved wall-following and navigation logic through testing.",
+      ],
+    },
+  },
+
+  {
+    id: "streaming-device",
+    companyName: "Gaming Streaming Device",
+    type: "Personal",
+    category: ["3D Modeling", "Manufacturing"],
+    shortDescription:
+      "Designed and 3D printed a custom enclosure for a Raspberry Pi-based gaming streaming device.",
+
+    startDate: new Date("2023-11-01"),
+    endDate: new Date("2023-11-03"),
+
+    companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/asme-hpv/asme1.png",
+          "/projects/asme-hpv/asme2.jpg",
+          "/projects/asme-hpv/asme3.jpg",
+          "/projects/asme-hpv/asme4.jpg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Focused on aesthetic-driven enclosure design inspired by retro electronics for a Raspberry Pi-based game streaming system.",
+      ],
+      bullets: [
+        "Included ports optimized for quick setup and use.",
+        "Integrated rubber feet for dual orientation stability.",
+        "Added ventilation and cable management features.",
+        "Configured Raspberry Pi for Sunshine + Moonlight streaming.",
+      ],
+    },
+  },
+
+  {
+    id: "mouse-bungee",
+    companyName: "3D-Printed Mouse Bungee",
+    type: "Personal",
+    category: ["Mechanical Design", "3D Printing", "Product Design", "Mechanisms"],
+    shortDescription:
+      "Two-week design project creating a 3D-printed mouse bungee with a bearing-supported articulated arm for reduced cable drag.",
+
+    startDate: new Date("2026-02-01"),
+    endDate: new Date("2026-02-14"),
+
+    companyLogoImg: "/projects/mouse-bungee/placeholder.jpg",
+
+    pagesInfoArr: [
+      {
+        imgArr: ["/projects/mouse-bungee/placeholder.jpg"],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Designed a compact 3D-printed mouse bungee using a bearing-supported articulated arm to improve cable management and reduce drag during gaming.",
+      ],
+      bullets: [
+        "Designed bearing-supported arm for smooth cable motion.",
+        "Iterated from clamp design to bistable locking mechanism.",
+        "3D printed and assembled prototype using off-the-shelf hardware.",
+      ],
+    },
+  },
+
+  {
+    id: "wood-coaster-holder",
+    companyName: "Wood Coaster Holder",
+    type: "Personal",
+    category: ["Manufacturing", "Product Design"],
+    shortDescription:
+      "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
+
+    startDate: new Date("2026-04-01"),
+    endDate: new Date("2026-04-01"),
+
+    companyLogoImg: "/projects/coaster/placeholder.jpg",
+
+    pagesInfoArr: [
+      {
+        imgArr: ["/projects/coaster/placeholder.jpg"],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Quick personal woodworking project focused on learning basic fabrication and producing a functional wooden coaster holder.",
+      ],
+      bullets: [
+        "Designed in SolidWorks with simple joinery.",
+        "Fabricated using hardwood and basic woodworking tools.",
+        "Completed rapid end-to-end prototype build.",
+      ],
+    },
+  },
+
+  {
+    id: "crutch",
+    companyName: "CrutchMate: Adaptive Crutch Accessory",
+    type: "Professional",
+    category: ["3D Modeling", "3D Printing", "Rapid Prototyping"],
+    shortDescription:
+      "Developed a modular crutch accessory system to improve usability and daily mobility.",
+
+    startDate: new Date("2024-09-16"),
+    endDate: new Date("2024-09-23"),
+
+    companyLogoImg: "/projects/crutch/crutch1.jpg",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/crutch/crutch2.jpg",
+          "/projects/crutch/crutch4.jpg",
+          "/projects/crutch/crutch3.jpg",
+          "/projects/crutch/crutch5.jpg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Developed a modular crutch attachment system to improve usability and accessibility for daily use.",
+      ],
+      bullets: [
+        "Designed modular 3D-printed accessory system.",
+        "Integrated magnetic attachment system.",
+        "Created interchangeable functional modules.",
+        "Rapid prototyping and usability testing.",
+      ],
+    },
+  },
+
+  {
+    id: "rocket",
+    companyName: "Saturn V Model Rocket",
+    type: "Professional",
+    category: ["3D Modeling", "3D Printing", "Simulation"],
+    shortDescription:
+      "Designed and tested a functional model rocket inspired by Saturn V architecture.",
+
+    startDate: new Date("2024-04-20"),
+    endDate: new Date("2024-05-10"),
+
+    companyLogoImg: "/projects/rocket/rocket0.jpg",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/rocket/rocket1.mov",
+          "/projects/rocket/rocket2.jpeg",
+          "/projects/rocket/rocket3.jpg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Designed and tested a model rocket with multiple subsystems and flight analysis using simulation and real launches.",
+      ],
+      bullets: [
+        "Designed full rocket subsystem architecture.",
+        "Performed stability and flight simulation analysis.",
+        "Conducted physical test launches and iterations.",
+        "Produced engineering drawings for manufacturing.",
+      ],
+    },
   },
 
   {
@@ -244,29 +324,31 @@ export const Projects: ProjectInterface[] = [
     type: "Professional",
     category: ["3D Modeling", "Analysis"],
     shortDescription:
-      "Supported the development of Sage, an all-season indoor garden, by standardizing fasteners, improving water management, and prototyping hydroponics components.",
+      "Supported hydroponic indoor garden development focusing on manufacturability and system optimization.",
+
     startDate: new Date("2022-08-01"),
     endDate: new Date("2022-12-15"),
+
     companyLogoImg: "/projects/garden/garden1.jpg",
+
     pagesInfoArr: [
       {
-        imgArr: [
-        "/projects/garden/garden2.jpg",
+        imgArr: ["/projects/garden/garden2.jpg"],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Supported development of a hydroponic indoor garden system focusing on manufacturability and water management.",
       ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "Interned with the Innovation Studios team at GE Appliances to support the development of Sage, an all-season indoor garden that integrates refrigeration with a hydroponics system. The product featured a rotating mechanism for multi-wall plant growth and a built-in watering and nutrient delivery system. My contributions focused on improving manufacturability, water management, and prototype development to support concept refinement.",
-    ],
-    bullets: [
-      "Standardized fastener selection, reducing part complexity and streamlining assembly.",
-      "Improved the water management system to enhance root control and reduce clogging.",
-      "Designed and fabricated prototypes to test structural durability and hydroponic performance.",
-      "Collaborated with cross-functional design and engineering teams within the Innovation Studios group.",
-    ],
-  },
+      bullets: [
+        "Standardized fastener systems.",
+        "Improved water management design.",
+        "Built prototypes for validation.",
+        "Collaborated with cross-functional team.",
+      ],
+    },
   },
 
   {
@@ -275,34 +357,33 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["3D Modeling", "Analysis", "FEA"],
     shortDescription:
-      "Optimized a robot component with nTop by applying lattice structures and FEA validation, achieving weight reduction while maintaining structural integrity.",
+      "Optimized robot component using lattice structures and FEA validation for weight reduction.",
+
     startDate: new Date("2025-04-01"),
-    endDate: new Date("2025-4-15"),
+    endDate: new Date("2025-04-15"),
+
     companyLogoImg: "/projects/lattice/lattice1.jpg",
+
     pagesInfoArr: [
       {
         imgArr: [
-        "/projects/lattice/lattice8.jpg",
-        "/projects/lattice/lattice1.jpg",
-        "/projects/lattice/lattice6.jpg",
-        "/projects/lattice/lattice3.jpg",
-        "/projects/lattice/lattice7.jpg",
-        "/projects/lattice/lattice4.jpg",
-        "/projects/lattice/lattice5.jpg",
+          "/projects/lattice/lattice8.jpg",
+          "/projects/lattice/lattice1.jpg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Optimized structural component using lattice design and FEA simulation for weight reduction and performance validation.",
       ],
-      title: "Landing Page"
-    }
-  ],
-  descriptionDetails: {
-    paragraphs: [
-      "As part of a design exploration, I used nTop to optimize a structural robot component by replacing solid geometry with lattice structures. The goal was to reduce weight while maintaining structural performance. I compared two lattice types (Gyroid and Body-Centered Cubic) against the original solid part, applying finite element analysis (FEA) to validate performance. This project strengthened my skills in DfAM, topology optimization, and structural validation, while teaching me the trade-offs between mass reduction and stress distribution in advanced designs.",
-    ],
-    bullets: [
-      "Optimized a robot component in nTop with lattice structures, reducing weight by over 60%.",
-      "Validated designs through FEA simulations, ensuring structural performance.",
-      "Integrated SolidWorks, nTop, and FEA tools for a seamless design workflow.",
-      "Applied DfAM principles to balance lightweighting with manufacturability.",
-    ],
+      bullets: [
+        "Achieved significant weight reduction via lattice design.",
+        "Validated using FEA simulation.",
+        "Compared multiple lattice architectures.",
+        "Applied DfAM principles.",
+      ],
     },
   },
 ];
