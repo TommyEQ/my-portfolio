@@ -183,7 +183,7 @@ export const Projects: ProjectInterface[] = [
     id: "mouse-bungee",
     companyName: "3D-Printed Mouse Bungee",
     type: "Personal",
-    category: ["Mechanical Design", "3D Printing", "Product Design", "Mechanisms"],
+    category: ["Mechanical Design", "3D Printing", "Product Design"],
     shortDescription:
       "Two-week design project creating a 3D-printed mouse bungee with a bearing-supported articulated arm for reduced cable drag.",
 
