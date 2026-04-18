@@ -27,62 +27,32 @@ export interface ProjectInterface {
 export const Projects: ProjectInterface[] = [
 
   // =========================
-  // 🏆 MOST IMPRESSIVE FIRST
+  // 🏆 TOP 3 MOST IMPORTANT
   // =========================
 
   {
-    id: "robox",
-    companyName: "Autonomous RoboMaster Competition Robot",
+    id: "asme-hpv",
+    companyName: "ASME Human Powered Vehicle",
     type: "Professional",
-    category: ["Robotics", "Autonomous Systems", "Computer Vision", "3D Modeling"],
+    category: ["3D Modeling", "Manufacturing", "FEA"],
     shortDescription:
-      "Served as mechanical lead for a RoboMaster-style autonomous competition robot, responsible for the design, fabrication, and integration of the full mechanical system. Led development of a modular robotic platform optimized for stability, maneuverability, and sensor integration.",
+      "Designed and built a pedal-driven vehicle for the ASME competition, focusing on CAD/FEA and fabrication.",
 
-    startDate: new Date("2024-08-01"),
-    endDate: new Date("2025-05-01"),
+    startDate: new Date("2023-07-01"),
+    endDate: new Date("2023-07-01"),
 
-    companyLogoImg: "/projects/robox/placeholder.jpg",
-
-    pagesInfoArr: [
-      {
-        imgArr: ["/projects/robox/placeholder.jpg"],
-        title: "Landing Page",
-      },
-    ],
-
-    descriptionDetails: {
-      paragraphs: [
-        "Served as mechanical lead for a RoboMaster-style autonomous competition robot, responsible for the design, fabrication, and integration of the full mechanical system. Led development of a modular robotic platform optimized for stability, maneuverability, and sensor integration, while coordinating closely with electrical and software sub-teams.",
-      ],
-      bullets: [
-        "Led mechanical design and fabrication of the robot chassis, optimizing for rigidity, weight distribution, and modular subsystem integration.",
-        "Coordinated cross-functional integration with electrical and software teams to ensure sensor placement and system reliability.",
-        "Iterated designs based on testing feedback to improve durability and competition performance.",
-      ],
-    },
-  },
-
-  {
-    id: "case",
-    companyName: "Custom Modular PC Case",
-    type: "Personal",
-    category: ["3D Modeling", "3D Printing", "Simulation"],
-    shortDescription:
-      "Designed and prototyped a portable, modular PC case using aluminum extrusions and ABS/ASA 3D-printed parts.",
-
-    startDate: new Date("2025-04-20"),
-    endDate: new Date("2025-05-10"),
-
-    companyLogoImg: "/projects/case/case2.png",
+    companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
 
     pagesInfoArr: [
       {
         imgArr: [
-          "/projects/case/case2.mov",
-          "/projects/case/case4.jpg",
-          "/projects/case/case3.mov",
-          "/projects/case/case5.jpeg",
-          "/projects/case/case6.jpeg",
+          "/projects/asme-hpv/asme1.png",
+          "/projects/asme-hpv/asme2.jpg",
+          "/projects/asme-hpv/asme3.jpg",
+          "/projects/asme-hpv/asme4.jpg",
+          "/projects/asme-hpv/asme5.jpeg",
+          "/projects/asme-hpv/asme6.jpg",
+          "/projects/asme-hpv/asme7.jpg",
         ],
         title: "Landing Page",
       },
@@ -90,13 +60,14 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Designed and prototyped a fully custom PC case focused on portability, modularity, and thermal performance using aluminum extrusion framing and 3D-printed components. CFD simulations in SolidWorks were used to validate airflow prior to fabrication.",
+        "Collaborated with a senior design team to engineer and manufacture a pedal-driven vehicle that met ASME competition guidelines. My role focused on CAD/FEA, structural optimization, and hands-on fabrication to deliver a competition-ready prototype.",
       ],
       bullets: [
-        "Designed a portable modular PC case with optimized airflow and thermal management.",
-        "Used aluminum extrusions and ABS/ASA 3D-printed parts for structural and thermal performance.",
-        "Performed CFD simulation in SolidWorks to validate cooling design.",
-        "Iterated for manufacturability and assembly readiness.",
+        "Led CAD modeling and finite element analysis (SolidWorks) to optimize frame strength and reduce weight.",
+        "Fabricated components using aluminum and steel tubing, applying MIG welding, lathes, tube bending, and drill presses.",
+        "Conducted safety, steering, and braking tests to ensure reliability and compliance.",
+        "Coordinated with teammates on project management, design reviews, and sponsor deliverables.",
+        "Strengthened expertise in CAD/FEA, hands-on manufacturing, and design validation through end-to-end development.",
       ],
     },
   },
@@ -142,6 +113,45 @@ export const Projects: ProjectInterface[] = [
   },
 
   {
+    id: "rocket",
+    companyName: "Saturn V Model Rocket",
+    type: "Professional",
+    category: ["3D Modeling", "3D Printing", "Simulation"],
+    shortDescription:
+      "Designed, prototyped, and tested a functional model rocket inspired by the Saturn V.",
+
+    startDate: new Date("2024-04-20"),
+    endDate: new Date("2024-05-10"),
+
+    companyLogoImg: "/projects/rocket/rocket0.jpg",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/rocket/rocket1.mov",
+          "/projects/rocket/rocket2.jpeg",
+          "/projects/rocket/rocket3.jpg",
+          "/projects/rocket/rocket4.jpg",
+          "/projects/rocket/rocket5.jpeg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Designed, prototyped, and tested a functional model rocket inspired by Saturn V architecture.",
+      ],
+      bullets: [
+        "Developed full rocket subsystem architecture.",
+        "Performed stability and flight simulation analysis.",
+        "Conducted physical test launches and iterations.",
+        "Produced engineering drawings for manufacturing.",
+      ],
+    },
+  },
+
+  {
     id: "streaming-device",
     companyName: "Gaming Streaming Device",
     type: "Personal",
@@ -168,7 +178,7 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Focused on aesthetic-driven enclosure design inspired by retro electronics for a Raspberry Pi-based game streaming system.",
+        "A retro-inspired enclosure design for a Raspberry Pi-based game streaming system.",
       ],
       bullets: [
         "Included ports optimized for quick setup and use.",
@@ -185,7 +195,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["Mechanical Design", "3D Printing", "Product Design"],
     shortDescription:
-      "Two-week design project creating a 3D-printed mouse bungee with a bearing-supported articulated arm for reduced cable drag.",
+      "Two-week design project creating a 3D-printed mouse bungee with a bearing-supported articulated arm.",
 
     startDate: new Date("2026-02-01"),
     endDate: new Date("2026-02-14"),
@@ -201,44 +211,51 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Designed a compact 3D-printed mouse bungee using a bearing-supported articulated arm to improve cable management and reduce drag during gaming.",
+        "Designed a 3D-printed mouse bungee using a bearing-supported articulated arm to improve cable control during gaming.",
       ],
       bullets: [
-        "Designed bearing-supported arm for smooth cable motion.",
-        "Iterated from clamp design to bistable locking mechanism.",
-        "3D printed and assembled prototype using off-the-shelf hardware.",
+        "Designed smooth bearing-supported arm mechanism.",
+        "Iterated from clamp system to bistable locking design.",
+        "3D printed and assembled full prototype with hardware.",
       ],
     },
   },
 
   {
-    id: "wood-coaster-holder",
-    companyName: "Wood Coaster Holder",
+    id: "case",
+    companyName: "Custom Modular PC Case",
     type: "Personal",
-    category: ["Manufacturing", "Product Design"],
+    category: ["3D Modeling", "3D Printing", "Simulation"],
     shortDescription:
-      "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
+      "Designed and prototyped a portable modular PC case using aluminum extrusions and 3D-printed parts.",
 
-    startDate: new Date("2026-04-01"),
-    endDate: new Date("2026-04-01"),
+    startDate: new Date("2025-04-20"),
+    endDate: new Date("2025-05-10"),
 
-    companyLogoImg: "/projects/coaster/placeholder.jpg",
+    companyLogoImg: "/projects/case/case2.png",
 
     pagesInfoArr: [
       {
-        imgArr: ["/projects/coaster/placeholder.jpg"],
+        imgArr: [
+          "/projects/case/case2.mov",
+          "/projects/case/case4.jpg",
+          "/projects/case/case3.mov",
+          "/projects/case/case5.jpeg",
+          "/projects/case/case6.jpeg",
+        ],
         title: "Landing Page",
       },
     ],
 
     descriptionDetails: {
       paragraphs: [
-        "Quick personal woodworking project focused on learning basic fabrication and producing a functional wooden coaster holder.",
+        "Designed a modular PC case focused on portability and thermal performance using CFD validation.",
       ],
       bullets: [
-        "Designed in SolidWorks with simple joinery.",
-        "Fabricated using hardwood and basic woodworking tools.",
-        "Completed rapid end-to-end prototype build.",
+        "Designed modular aluminum extrusion frame.",
+        "Used ABS/ASA 3D printing for structural components.",
+        "Performed CFD simulation for airflow optimization.",
+        "Iterated for manufacturability and assembly.",
       ],
     },
   },
@@ -249,7 +266,7 @@ export const Projects: ProjectInterface[] = [
     type: "Professional",
     category: ["3D Modeling", "3D Printing", "Rapid Prototyping"],
     shortDescription:
-      "Developed a modular crutch accessory system to improve usability and daily mobility.",
+      "Developed a modular crutch accessory system to improve usability and mobility.",
 
     startDate: new Date("2024-09-16"),
     endDate: new Date("2024-09-23"),
@@ -270,50 +287,13 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Developed a modular crutch attachment system to improve usability and accessibility for daily use.",
+        "Developed a modular crutch accessory system to improve usability and accessibility.",
       ],
       bullets: [
-        "Designed modular 3D-printed accessory system.",
-        "Integrated magnetic attachment system.",
+        "Designed modular 3D-printed attachment system.",
+        "Integrated magnetic coupling system.",
         "Created interchangeable functional modules.",
         "Rapid prototyping and usability testing.",
-      ],
-    },
-  },
-
-  {
-    id: "rocket",
-    companyName: "Saturn V Model Rocket",
-    type: "Professional",
-    category: ["3D Modeling", "3D Printing", "Simulation"],
-    shortDescription:
-      "Designed and tested a functional model rocket inspired by Saturn V architecture.",
-
-    startDate: new Date("2024-04-20"),
-    endDate: new Date("2024-05-10"),
-
-    companyLogoImg: "/projects/rocket/rocket0.jpg",
-
-    pagesInfoArr: [
-      {
-        imgArr: [
-          "/projects/rocket/rocket1.mov",
-          "/projects/rocket/rocket2.jpeg",
-          "/projects/rocket/rocket3.jpg",
-        ],
-        title: "Landing Page",
-      },
-    ],
-
-    descriptionDetails: {
-      paragraphs: [
-        "Designed and tested a model rocket with multiple subsystems and flight analysis using simulation and real launches.",
-      ],
-      bullets: [
-        "Designed full rocket subsystem architecture.",
-        "Performed stability and flight simulation analysis.",
-        "Conducted physical test launches and iterations.",
-        "Produced engineering drawings for manufacturing.",
       ],
     },
   },
@@ -324,7 +304,7 @@ export const Projects: ProjectInterface[] = [
     type: "Professional",
     category: ["3D Modeling", "Analysis"],
     shortDescription:
-      "Supported hydroponic indoor garden development focusing on manufacturability and system optimization.",
+      "Supported hydroponic indoor garden development and system optimization.",
 
     startDate: new Date("2022-08-01"),
     endDate: new Date("2022-12-15"),
@@ -345,8 +325,8 @@ export const Projects: ProjectInterface[] = [
       bullets: [
         "Standardized fastener systems.",
         "Improved water management design.",
-        "Built prototypes for validation.",
-        "Collaborated with cross-functional team.",
+        "Built validation prototypes.",
+        "Collaborated with engineering team.",
       ],
     },
   },
@@ -357,7 +337,7 @@ export const Projects: ProjectInterface[] = [
     type: "Personal",
     category: ["3D Modeling", "Analysis", "FEA"],
     shortDescription:
-      "Optimized robot component using lattice structures and FEA validation for weight reduction.",
+      "Optimized robot component using lattice structures and FEA validation.",
 
     startDate: new Date("2025-04-01"),
     endDate: new Date("2025-04-15"),
@@ -376,12 +356,12 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Optimized structural component using lattice design and FEA simulation for weight reduction and performance validation.",
+        "Optimized structural component using lattice design and FEA simulation.",
       ],
       bullets: [
-        "Achieved significant weight reduction via lattice design.",
-        "Validated using FEA simulation.",
-        "Compared multiple lattice architectures.",
+        "Reduced weight via lattice structures.",
+        "Validated with FEA.",
+        "Compared multiple architectures.",
         "Applied DfAM principles.",
       ],
     },
