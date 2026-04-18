@@ -91,11 +91,11 @@ export const Projects: ProjectInterface[] = [
       "A major focus of this build was refining my design aesthetics, drawing inspiration from 1980s retro analog devices",
     ],
     bullets: [
-      "Included ample ports for quick setup and play"
-      "Integrated rubber feet to support two stable configurations",
-      "Added ventilation for improved cooling and cable clips for better organization",
-      "Programmed the Raspberry Pi to run Sunshine and Moonlight for seamless game streaming",
-    ],
+  "Included ample ports for quick setup and play",
+  "Integrated rubber feet to support two stable configurations",
+  "Added ventilation for improved cooling and cable clips for better organization",
+  "Programmed the Raspberry Pi to run Sunshine and Moonlight for seamless game streaming",
+],
   },
 },
   {
