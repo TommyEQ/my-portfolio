@@ -350,8 +350,8 @@ export const Projects: ProjectInterface[] = [
     {
       title: "Landing Page",
       imgArr: [
-        "/projects/cr/cr1.webp",
-        "https://www.youtube.com/watch?v=5t3-eXHC5Zs",
+        "/projects/cr/cr2.webp",
+        "/projects/cr/cr3.mov",
       ],
     },
   ],
