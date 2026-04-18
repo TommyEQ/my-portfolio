@@ -351,7 +351,7 @@ export const Projects: ProjectInterface[] = [
       title: "Landing Page",
       imgArr: [
         "/projects/cr/cr1.webp",
-        "/projects/cr/cr2.webp",
+        "https://www.youtube.com/watch?v=5t3-eXHC5Zs",
       ],
     },
   ],
@@ -369,20 +369,6 @@ export const Projects: ProjectInterface[] = [
   },
 },
 
-  descriptionDetails: {
-    paragraphs: [
-      "Mechanical engineering intern at Carnegie Robotics supporting development efforts for the DARPA RACER (Rapid Autonomous Complex Environment Response) program. Worked on design and validation of mechanical subsystems for autonomous off-road vehicles operating in high-impact, unstructured terrain environments.",
-    ],
-
-    bullets: [
-      "Supported mechanical design and packaging of autonomy hardware for off-road robotic platforms.",
-      "Contributed to CAD development and iteration of structural mounting solutions for sensors and compute systems.",
-      "Collaborated with autonomy and perception teams to ensure mechanical layouts supported sensor line-of-sight and vibration constraints.",
-      "Assisted in design validation through simulation and design-for-rugged-environment considerations.",
-      "Gained exposure to full-stack autonomous vehicle development in a DARPA program environment.",
-    ],
-  },
-},
   {
     id: "garden",
     companyName: "All-season Indoor Garden",
