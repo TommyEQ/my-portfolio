@@ -122,31 +122,36 @@ export const Projects: ProjectInterface[] = [
     startDate: new Date("2025-04-20"),
     endDate: new Date("2025-05-10"),
 
-    companyLogoImg: "/projects/case/case2.png",
+    companyLogoImg: "/projects/case/case1.webp",
 
     pagesInfoArr: [
       {
         imgArr: [
-          "/projects/case/case2.mov",
-          "/projects/case/case4.jpg",
-          "/projects/case/case3.mov",
-          "/projects/case/case5.jpeg",
-          "/projects/case/case6.jpeg",
+          "/projects/case/case6.webp",
+          "/projects/case/case3.webp",
+          "/projects/case/case4.webp",
+          "/projects/case/case5.mov",
+          "/projects/case/case2.webp",
         ],
         title: "Landing Page",
       },
     ],
 
-    descriptionDetails: {
-      paragraphs: [
-        "Designed a modular PC case focused on portability and thermal performance using CFD validation.",
-      ],
-      bullets: [
-        "Designed modular aluminum extrusion frame.",
-        "Used ABS/ASA 3D printing for structural components.",
-        "Performed CFD simulation for airflow optimization.",
-        "Iterated for manufacturability and assembly.",
-      ],
+descriptionDetails: {
+  paragraphs: [
+    "Designed a compact, modular small form factor PC case focused on portability, thermal performance, and serviceability using CFD-driven airflow validation.",
+    "The enclosure fully integrates all PC components within a compact 425 × 142 × 137 mm volume, optimizing space efficiency while maintaining accessibility and structural rigidity.",
+  ],
+  bullets: [
+    "Designed modular aluminum extrusion frame for structural support and easy assembly/disassembly.",
+    "Used ABS/ASA 3D printing for custom structural and enclosure components with improved heat resistance.",
+    "Performed CFD simulations to optimize airflow paths and reduce thermal hotspots.",
+    "Integrated snap-fit SSD mounting mechanism for fast swapping and tool-less storage access.",
+    "Added side-mounted LCD display showing real-time CPU/GPU usage, CPU temperature, and memory load.",
+    "Implemented internal cable management strategy for improved airflow and clean assembly.",
+    "Designed rubber feet for improved stability, vibration damping, and desk grip.",
+    "Iterated design for manufacturability, assembly efficiency, and compact packaging constraints.",
+  ],
     },
   },
   {
