@@ -151,10 +151,10 @@ descriptionDetails: {
     "Implemented internal cable management strategy for improved airflow and clean assembly.",
     "Designed rubber feet for improved stability, vibration damping, and desk grip.",
     "Iterated design for manufacturability, assembly efficiency, and compact packaging constraints.",
-  ],
+      ],
     },
   },
-  {
+{
   id: "wood-coaster-holder",
   companyName: "Wood Coaster Holder",
   type: "Personal",
