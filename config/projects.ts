@@ -273,11 +273,15 @@ descriptionDetails: {
     startDate: new Date("2026-02-01"),
     endDate: new Date("2026-02-14"),
 
-    companyLogoImg: "/projects/mouse-bungee/placeholder.jpg",
+    companyLogoImg: "/projects/mouse/mouse1.webp",
 
     pagesInfoArr: [
       {
-        imgArr: ["/projects/mouse-bungee/placeholder.jpg"],
+        imgArr: [
+          "/projects/mouse/mouse2.mov",
+          "/projects/mouse/mouse3.webp",
+          "/projects/mouse/mouse4.webp",
+        ],
         title: "Landing Page",
       },
     ],
@@ -288,8 +292,7 @@ descriptionDetails: {
       ],
       bullets: [
         "Designed smooth bearing-supported arm mechanism.",
-        "Iterated from clamp system to bistable locking design.",
-        "3D printed and assembled full prototype with hardware.",
+        "Iterated from clamp system to bistable linkage locking design.",
       ],
     },
   },
