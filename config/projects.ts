@@ -26,9 +26,7 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
 
-  // =========================
-  // 🏆 TOP 3 MOST IMPORTANT
-  // =========================
+
 
   {
     id: "asme-hpv",
@@ -240,15 +238,12 @@ descriptionDetails: {
     startDate: new Date("2023-11-01"),
     endDate: new Date("2023-11-03"),
 
-    companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
+    companyLogoImg: "/projects/game/game1.webp",
 
     pagesInfoArr: [
       {
         imgArr: [
-          "/projects/asme-hpv/asme1.png",
-          "/projects/asme-hpv/asme2.jpg",
-          "/projects/asme-hpv/asme3.jpg",
-          "/projects/asme-hpv/asme4.jpg",
+          "/projects/game/game1.webp",
         ],
         title: "Landing Page",
       },
