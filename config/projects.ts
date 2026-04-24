@@ -337,7 +337,7 @@ descriptionDetails: {
   },
 {
   id: "carnegie-racer",
-  companyName: "DARPA RACER Heavy Platform)",
+  companyName: "DARPA RACER Heavy Platform",
   type: "Professional",
   category: ["Internship", "Robotics", "Autonomous Systems", "FEA", "Mechanical Design"],
 
