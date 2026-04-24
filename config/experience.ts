@@ -35,7 +35,7 @@ export const experiences: ExperienceInterface[] = [
   },
   {
     id: "pennstate",
-    position: "Reasearch Assistant",
+    position: "Research Assistant",
     company: "Penn State University",
     location: "University Park, PA",
     startDate: new Date("2022-08-01"),
