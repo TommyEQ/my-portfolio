@@ -103,7 +103,7 @@ export default function IndexPage() {
           </AnimatedText>
           <div className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Welcome to my portfolio! Here you'll find a selection of my mechanical engineering projects, highlighting my experience in design, analysis, and hands-on prototyping.
+              Welcome to my portfolio! Here you&apos;ll find a selection of my mechanical engineering projects, highlighting my experience in design, analysis, and hands-on prototyping.
             </p>
           </div>
 
