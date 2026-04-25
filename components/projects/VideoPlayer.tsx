@@ -8,6 +8,7 @@ export default function VideoPlayer({ src }: VideoPlayerProps) {
   return (
     <video
       autoPlay
+      controls
       muted
       loop
       playsInline
