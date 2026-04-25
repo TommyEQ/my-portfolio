@@ -21,6 +21,7 @@ export interface ProjectInterface {
   endDate: Date;
   companyLogoImg: any;
   modelUrl?: string;
+  modelScale?: number;
   descriptionDetails: DescriptionDetailsInterface;
   pagesInfoArr: PagesInfoInterface[];
 }
@@ -123,6 +124,7 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/case/case1.webp",
     modelUrl: "/sffpc.glb",
+    modelScale: 0.01,
 
 
     pagesInfoArr: [
@@ -241,6 +243,7 @@ descriptionDetails: {
 
     companyLogoImg: "/projects/game/game1.webp",
     modelUrl: "/SL.glb",
+    modelScale: 0.05,
 
     pagesInfoArr: [
       {
@@ -268,6 +271,7 @@ descriptionDetails: {
     id: "mouse-bungee",
     companyName: "3D-Printed Mouse Bungee",
     modelUrl: "/Bungee.glb",
+    modelScale: 0.05,
     
     type: "Personal",
     category: ["Mechanical Design", "3D Printing", "Product Design"],
