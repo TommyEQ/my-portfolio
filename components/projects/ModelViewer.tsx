@@ -5,9 +5,6 @@ import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
 import { Suspense, Component, ReactNode } from 'react'
 
 class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
-  { children: ReactNode; fallback: ReactNode },
-  { hasError: boolean }
-> {
   constructor(props: any) {
     super(props)
     this.state = { hasError: false }
