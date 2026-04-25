@@ -122,7 +122,7 @@ export const Projects: ProjectInterface[] = [
     endDate: new Date("2025-05-10"),
 
     companyLogoImg: "/projects/case/case1.webp",
-    modelUrl: "https://res.cloudinary.com/dcrhq0f41/raw/upload/v1777079851/SFFPC_Compressed_Extra_Web_mxpokr.glb",
+    modelUrl: "https://res.cloudinary.com/dcrhq0f41/raw/upload/SFFPC_Compressed_Extra_Web_mxpokr.glb",
 
 
     pagesInfoArr: [
