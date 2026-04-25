@@ -1,7 +1,7 @@
 'use client'
 
 import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
+import { OrbitControls, useGLTF, Environment, Center } from '@react-three/drei'
 import { Suspense, Component, ReactNode } from 'react'
 
 class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
@@ -20,7 +20,11 @@ class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode
 
 function Model({ url }: { url: string }) {
   const { scene } = useGLTF(url)
-  return <primitive object={scene} />
+  return (
+    <Center>
+      <primitive object={scene} scale={0.01} />
+    </Center>
+  )
 }
 
 export default function ModelViewer({ url }: { url: string }) {
@@ -33,7 +37,7 @@ export default function ModelViewer({ url }: { url: string }) {
       </div>
     }>
       <div style={{ width: '100%', height: '500px' }} className="rounded-lg border bg-muted">
-        <Canvas camera={{ position: [0, 2, 8], fov: 45 }}>
+        <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
           <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} intensity={1} />
           <Suspense fallback={null}>
@@ -45,8 +49,8 @@ export default function ModelViewer({ url }: { url: string }) {
             autoRotateSpeed={0.5}
             enableZoom={true}
             enablePan={false}
-            minDistance={3}
-            maxDistance={15}
+            minDistance={2}
+            maxDistance={10}
           />
         </Canvas>
       </div>
