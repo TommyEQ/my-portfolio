@@ -18,16 +18,16 @@ class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode
   }
 }
 
-function Model({ url }: { url: string }) {
+function Model({ url, scale }: { url: string; scale: number }) {
   const { scene } = useGLTF(url)
   return (
     <Center>
-      <primitive object={scene} scale={0.01} />
+      <primitive object={scene} scale={scale} />
     </Center>
   )
 }
 
-export default function ModelViewer({ url }: { url: string }) {
+export default function ModelViewer({ url, scale = 0.01 }: { url: string; scale?: number }) {
   const [interacted, setInteracted] = useState(false)
 
   if (!url) return null
@@ -51,7 +51,7 @@ export default function ModelViewer({ url }: { url: string }) {
             }}
             className="flex items-center gap-2 bg-black/50 text-white text-sm px-4 py-2 rounded-full backdrop-blur-sm"
           >
-            <span> Drag to rotate · Scroll to zoom</span>
+            <span>🖱️ Drag to rotate · Scroll to zoom</span>
           </div>
         )}
         <Canvas
@@ -61,7 +61,7 @@ export default function ModelViewer({ url }: { url: string }) {
           <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} intensity={1} />
           <Suspense fallback={null}>
-            <Model url={url} />
+            <Model url={url} scale={scale} />
             <Environment preset="studio" />
           </Suspense>
           <OrbitControls
