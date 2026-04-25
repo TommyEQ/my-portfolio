@@ -113,15 +113,16 @@ export default function Project({ params }: ProjectPageProps) {
           (media.endsWith(".mov") || media.endsWith(".mp4")) ? (
             <video
               key={ind}
-              src={media}
-              autoPlay
+              controls
               muted
               loop
               playsInline
               width={720}
               height={405}
               className="my-4 rounded-lg border bg-muted transition-colors"
-            />
+            >
+            <source src={media} type="video/mp4" />
+        </video>
           ) : (
             <Image
               src={media}
