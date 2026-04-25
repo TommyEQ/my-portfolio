@@ -4,7 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Environment } from '@react-three/drei'
 import { Suspense, Component, ReactNode } from 'react'
 
-class ErrorBoundary extends Component
+class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
   { children: ReactNode; fallback: ReactNode },
   { hasError: boolean }
 > {
