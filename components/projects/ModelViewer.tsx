@@ -33,14 +33,21 @@ export default function ModelViewer({ url }: { url: string }) {
       </div>
     }>
       <div style={{ width: '100%', height: '500px' }} className="rounded-lg border bg-muted">
-        <Canvas camera={{ position: [3, 3, 3], fov: 45 }}>
+        <Canvas camera={{ position: [0, 2, 8], fov: 45 }}>
           <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} intensity={1} />
           <Suspense fallback={null}>
             <Model url={url} />
             <Environment preset="studio" />
           </Suspense>
-          <OrbitControls autoRotate autoRotateSpeed={1.5} enableZoom enablePan={false} />
+          <OrbitControls
+            autoRotate={true}
+            autoRotateSpeed={0.5}
+            enableZoom={true}
+            enablePan={false}
+            minDistance={3}
+            maxDistance={15}
+          />
         </Canvas>
       </div>
     </ErrorBoundary>
