@@ -51,7 +51,7 @@ export default function ModelViewer({ url }: { url: string }) {
             }}
             className="flex items-center gap-2 bg-black/50 text-white text-sm px-4 py-2 rounded-full backdrop-blur-sm"
           >
-            <span>🖱️ Drag to rotate · Scroll to zoom</span>
+            <span> Drag to rotate · Scroll to zoom</span>
           </div>
         )}
         <Canvas
