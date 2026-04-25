@@ -240,6 +240,7 @@ descriptionDetails: {
     endDate: new Date("2023-11-03"),
 
     companyLogoImg: "/projects/game/game1.webp",
+    modelUrl: "/SL.glb",
 
     pagesInfoArr: [
       {
