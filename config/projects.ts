@@ -129,7 +129,7 @@ export const Projects: ProjectInterface[] = [
       {
         imgArr: [
           "/projects/case/case2.webp",
-          "/projects/case/case3.mp4",
+          "public/projects/case/case3.mp4",
           "/projects/case/case4.webp",
         ],
         title: "Landing Page",
