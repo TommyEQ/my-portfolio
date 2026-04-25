@@ -41,7 +41,6 @@ export const Projects: ProjectInterface[] = [
     endDate: new Date("2023-07-01"),
 
     companyLogoImg: "/projects/asme-hpv/ASME_Final_Prototype.jpg",
-    modelUrl: "/HPV.glb",
 
     pagesInfoArr: [
       {
