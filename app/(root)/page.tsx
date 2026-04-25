@@ -141,7 +141,7 @@ export default function IndexPage() {
       className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-[#4D2F1A] text-[#4D2F1A]")}
       aria-label="View Tomas Quesada's Resume"
     >
-      <Icons.fileText className="w-4 h-4 mr-2" /> Resume
+      Resume
     </Link>
   </AnimatedText>
           </div>
