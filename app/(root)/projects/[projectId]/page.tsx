@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -117,6 +118,7 @@ export default function Project({ params }: ProjectPageProps) {
               muted
               loop
               playsInline
+              preload="auto"
               width={720}
               height={405}
               className="my-4 rounded-lg border bg-muted transition-colors"
