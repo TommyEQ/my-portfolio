@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import dynamic from "next/dynamic";
 
 import { Icons } from "@/components/common/icons";
 import ProjectDescription from "@/components/projects/project-description";
@@ -11,6 +12,11 @@ import { Projects } from "@/config/projects";
 import { siteConfig } from "@/config/site";
 import { cn, formatDateFromObj } from "@/lib/utils";
 import profileImg from "@/public/Headshot.jpeg";
+
+const ModelViewer = dynamic(
+  () => import("@/components/projects/ModelViewer"),
+  { ssr: false }
+);
 
 interface ProjectPageProps {
   params: {
@@ -61,7 +67,6 @@ export default function Project({ params }: ProjectPageProps) {
               height={42}
               className="rounded-full bg-background"
             />
-
             <div className="flex-1 text-left leading-tight">
               <p className="font-medium">{"Tomas Quesada"}</p>
               <p className="text-[12px] text-muted-foreground">
@@ -81,48 +86,54 @@ export default function Project({ params }: ProjectPageProps) {
         priority
       />
 
-
-
-      <div className="mb-7 ">
+      <div className="mb-7">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-2">
           Description
         </h2>
-        {/* {<project.descriptionComponent />} */}
         <ProjectDescription
           paragraphs={project.descriptionDetails.paragraphs}
           bullets={project.descriptionDetails.bullets}
         />
       </div>
 
-      <div className="mb-7 ">
+      {project.modelUrl && (
+        <div className="mb-7">
+          <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
+            3D Model
+          </h2>
+          <ModelViewer url={project.modelUrl} />
+        </div>
+      )}
+
+      <div className="mb-7">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
           Pictures
         </h2>
-          {project.pagesInfoArr[0].imgArr.map((media, ind) =>
-  media.endsWith(".mov") ? (
-    <video
-      key={ind}
-      src={media}
-      autoPlay
-      muted
-      loop
-      playsInline
-      width={720}
-      height={405}
-      className="my-4 rounded-lg border bg-muted transition-colors"
-    />
-  ) : (
-    <Image
-      src={media}
-      key={ind}
-      alt={media}
-      width={720}
-      height={405}
-      className="my-4 rounded-lg border bg-muted transition-colors"
-      priority
-    />
-  )
-)}
+        {project.pagesInfoArr[0].imgArr.map((media, ind) =>
+          media.endsWith(".mov") ? (
+            <video
+              key={ind}
+              src={media}
+              autoPlay
+              muted
+              loop
+              playsInline
+              width={720}
+              height={405}
+              className="my-4 rounded-lg border bg-muted transition-colors"
+            />
+          ) : (
+            <Image
+              src={media}
+              key={ind}
+              alt={media}
+              width={720}
+              height={405}
+              className="my-4 rounded-lg border bg-muted transition-colors"
+              priority
+            />
+          )
+        )}
       </div>
 
       <hr className="mt-12" />
