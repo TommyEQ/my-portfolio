@@ -133,6 +133,17 @@ export default function IndexPage() {
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>
             </AnimatedText>
+
+              <AnimatedText delay={1.0}>
+    <Link
+      href="/resume.pdf"
+      target="_blank"
+      className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-[#4D2F1A] text-[#4D2F1A]")}
+      aria-label="View Tomas Quesada's Resume"
+    >
+      <Icons.fileText className="w-4 h-4 mr-2" /> Resume
+    </Link>
+  </AnimatedText>
           </div>
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
