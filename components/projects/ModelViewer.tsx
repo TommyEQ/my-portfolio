@@ -1,32 +1,25 @@
 'use client'
 
-import { Canvas } from '@react-three/fiber'
-import { OrbitControls, useGLTF, Stage } from '@react-three/drei'
-import { Suspense } from 'react'
-
-function Model({ url }: { url: string }) {
-  const { scene } = useGLTF(url)
-  return <primitive object={scene} />
-}
+import { useEffect, useState } from 'react'
 
 export default function ModelViewer({ url }: { url: string }) {
+  const [View, setView] = useState<React.ComponentType<{ url: string }> | null>(null)
+
+  useEffect(() => {
+    import('./ModelViewerInner').then((mod) => {
+      setView(() => mod.default)
+    })
+  }, [])
+
   if (!url) return null
 
   return (
     <div style={{ width: '100%', height: '500px' }} className="rounded-lg border bg-muted">
-      <Canvas camera={{ position: [3, 3, 3], fov: 45 }}>
-        <Suspense fallback={null}>
-          <Stage environment="studio" intensity={0.5}>
-            <Model url={url} />
-          </Stage>
-          <OrbitControls
-            enableZoom={true}
-            enablePan={false}
-            autoRotate={true}
-            autoRotateSpeed={1.5}
-          />
-        </Suspense>
-      </Canvas>
+      {View ? <View url={url} /> : (
+        <div className="flex items-center justify-center h-full text-muted-foreground">
+          Loading 3D model...
+        </div>
+      )}
     </div>
   )
 }
