@@ -45,7 +45,7 @@ export default function ModelViewer({ url }: { url: string }) {
             <Environment preset="studio" />
           </Suspense>
           <OrbitControls
-            autoRotate={true}
+            autoRotate={false}
             autoRotateSpeed={0.5}
             enableZoom={true}
             enablePan={false}
