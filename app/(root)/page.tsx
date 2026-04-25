@@ -112,7 +112,7 @@ export default function IndexPage() {
               <Link
                 href={siteConfig.links.linkedin}
                 target="_blank"
-                className={cn(buttonVariants({ size: "lg" }))}
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
                 aria-label="View Tomas Quesada's LinkedIn profile"
               >
                 <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
