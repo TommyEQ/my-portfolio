@@ -271,7 +271,7 @@ descriptionDetails: {
     id: "mouse-bungee",
     companyName: "3D-Printed Mouse Bungee",
     modelUrl: "/Bungee.glb",
-    modelScale: 0.05,
+    modelScale: 0.04,
     
     type: "Personal",
     category: ["Mechanical Design", "3D Printing", "Product Design"],
