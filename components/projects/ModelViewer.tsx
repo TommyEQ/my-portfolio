@@ -2,7 +2,7 @@
 
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF, Environment, Center } from '@react-three/drei'
-import { Suspense, Component, ReactNode } from 'react'
+import { Suspense, Component, ReactNode, useState } from 'react'
 
 class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
   constructor(props: any) {
@@ -29,6 +29,7 @@ function Model({ url }: { url: string }) {
 
 export default function ModelViewer({ url }: { url: string }) {
   if (!url) return null
+  const [interacted, setInteracted] = useState(false)
 
   return (
     <ErrorBoundary fallback={
@@ -36,8 +37,26 @@ export default function ModelViewer({ url }: { url: string }) {
         Could not load 3D model
       </div>
     }>
-      <div style={{ width: '100%', height: '500px' }} className="rounded-lg border bg-muted">
-        <Canvas camera={{ position: [0, 2, 5], fov: 50 }}>
+      <div style={{ width: '100%', height: '500px', position: 'relative' }} className="rounded-lg border bg-muted">
+        {!interacted && (
+          <div
+            style={{
+              position: 'absolute',
+              bottom: '16px',
+              left: '50%',
+              transform: 'translateX(-50%)',
+              zIndex: 10,
+              pointerEvents: 'none',
+            }}
+            className="flex items-center gap-2 bg-black/50 text-white text-sm px-4 py-2 rounded-full backdrop-blur-sm"
+          >
+            <span>🖱️ Drag to rotate · Scroll to zoom</span>
+          </div>
+        )}
+        <Canvas
+          camera={{ position: [0, 2, 5], fov: 50 }}
+          onPointerDown={() => setInteracted(true)}
+        >
           <ambientLight intensity={1} />
           <directionalLight position={[5, 5, 5]} intensity={1} />
           <Suspense fallback={null}>
@@ -46,7 +65,6 @@ export default function ModelViewer({ url }: { url: string }) {
           </Suspense>
           <OrbitControls
             autoRotate={false}
-            autoRotateSpeed={0.5}
             enableZoom={true}
             enablePan={false}
             minDistance={2}
