@@ -28,8 +28,9 @@ function Model({ url }: { url: string }) {
 }
 
 export default function ModelViewer({ url }: { url: string }) {
-  if (!url) return null
   const [interacted, setInteracted] = useState(false)
+
+  if (!url) return null
 
   return (
     <ErrorBoundary fallback={
