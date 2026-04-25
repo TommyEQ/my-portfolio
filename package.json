@@ -9,10 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "three": "^0.176.0",
-    "@react-three/fiber": "^9.1.2",
-    "@react-three/drei": "^10.0.0",
-    "@types/three": "^0.176.0",
+    "three": "^0.150.0",
+    "@react-three/fiber": "^8.13.0",
+    "@react-three/drei": "^9.80.0",
+    "@types/three": "^0.150.0",
     "@hookform/resolvers": "^3.2.0",
     "@next/third-parties": "^14.1.0",
     "@radix-ui/react-accordion": "^1.1.2",
