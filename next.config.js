@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  transpilePackages: ['three'],
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      'three': require.resolve('three'),
+    };
+    return config;
+  },
   async headers() {
     return [
       {
@@ -20,5 +28,4 @@ const nextConfig = {
     ];
   },
 };
-
 module.exports = nextConfig;
