@@ -96,13 +96,13 @@ export default function Project({ params }: ProjectPageProps) {
       </div>
 
       {project.modelUrl && (
-        <div className="mb-7">
-          <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
-            3D Model
-          </h2>
-          <ModelViewer url={project.modelUrl} />
-        </div>
-      )}
+  <div className="mb-7">
+    <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
+      3D Model
+    </h2>
+    <ModelViewer url={project.modelUrl} scale={project.modelScale} />
+  </div>
+)}
 
       <div className="mb-7">
         <h2 className="inline-block font-heading text-3xl leading-tight lg:text-3xl mb-5">
