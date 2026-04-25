@@ -122,17 +122,15 @@ export const Projects: ProjectInterface[] = [
     endDate: new Date("2025-05-10"),
 
     companyLogoImg: "/projects/case/case1.webp",
-    modelUrl: "https://res.cloudinary.com/dcrhq0f41/image/upload/v1777079851/sffpc.glb",
+    modelUrl: "/sffpc.glb",
 
 
     pagesInfoArr: [
       {
         imgArr: [
-          "/projects/case/case6.webp",
-          "/projects/case/case3.webp",
-          "/projects/case/case4.webp",
-          "/projects/case/case5.mov",
           "/projects/case/case2.webp",
+          "/projects/case/case3.MOV",
+          "/projects/case/case4.webp",
         ],
         title: "Landing Page",
       },
