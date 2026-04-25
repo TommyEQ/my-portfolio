@@ -110,7 +110,7 @@ export default function Project({ params }: ProjectPageProps) {
           Pictures
         </h2>
         {project.pagesInfoArr[0].imgArr.map((media, ind) =>
-          media.endsWith(".mov") ? (
+          (media.endsWith(".mov") || media.endsWith(".mp4")) ? (
             <video
               key={ind}
               src={media}
