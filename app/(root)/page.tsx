@@ -109,41 +109,35 @@ export default function IndexPage() {
 
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
             <AnimatedText delay={0.6}>
-              <Link
-                href={siteConfig.links.linkedin}
-                target="_blank"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-                aria-label="View Tomas Quesada's LinkedIn profile"
-              >
-                <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
-              </Link>
-            </AnimatedText>
-            <AnimatedText delay={0.8}>
-              <Link
-                href={"/contact"}
-                rel="noreferrer"
-                className={cn(
-                  buttonVariants({
-                    variant: "outline",
-                    size: "lg",
-                  })
-                )}
-                aria-label="Contact Tomas Quesada"
-              >
-                <Icons.contact className="w-4 h-4 mr-2" /> Contact
-              </Link>
-            </AnimatedText>
-
-              <AnimatedText delay={1.0}>
-    <Link
-      href="/resume.pdf"
-      target="_blank"
-      className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-[#4D2F1A] text-[#4D2F1A]")}
-      aria-label="View Tomas Quesada's Resume"
-    >
-      Resume
-    </Link>
-  </AnimatedText>
+  <Link
+    href={siteConfig.links.linkedin}
+    target="_blank"
+    className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-[#4D2F1A] text-[#4D2F1A]")}
+    aria-label="View Tomas Quesada's LinkedIn profile"
+  >
+    <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
+  </Link>
+</AnimatedText>
+<AnimatedText delay={0.8}>
+  <Link
+    href={"/contact"}
+    rel="noreferrer"
+    className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-[#4D2F1A] text-[#4D2F1A]")}
+    aria-label="Contact Tomas Quesada"
+  >
+    <Icons.contact className="w-4 h-4 mr-2" /> Contact
+  </Link>
+</AnimatedText>
+<AnimatedText delay={1.0}>
+  <Link
+    href="/resume.pdf"
+    target="_blank"
+    className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-[#4D2F1A] text-[#4D2F1A]")}
+    aria-label="View Tomas Quesada's Resume"
+  >
+    Resume
+  </Link>
+</AnimatedText>
           </div>
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
