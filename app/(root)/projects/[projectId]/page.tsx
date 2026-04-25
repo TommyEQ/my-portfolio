@@ -1,4 +1,3 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
@@ -6,6 +5,7 @@ import dynamic from "next/dynamic";
 
 import { Icons } from "@/components/common/icons";
 import ProjectDescription from "@/components/projects/project-description";
+import VideoPlayer from "@/components/projects/VideoPlayer";
 import { buttonVariants } from "@/components/ui/button";
 import ChipContainer from "@/components/ui/chip-container";
 import CustomTooltip from "@/components/ui/custom-tooltip";
@@ -24,8 +24,6 @@ interface ProjectPageProps {
     projectId: string;
   };
 }
-
-const githubUsername = "namanbarkiya";
 
 export default function Project({ params }: ProjectPageProps) {
   let project = Projects.find((val) => val.id === params.projectId);
@@ -112,19 +110,7 @@ export default function Project({ params }: ProjectPageProps) {
         </h2>
         {project.pagesInfoArr[0].imgArr.map((media, ind) =>
           (media.endsWith(".mov") || media.endsWith(".mp4")) ? (
-            <video
-              key={ind}
-              autoPlay
-              muted
-              loop
-              playsInline
-              preload="auto"
-              width={720}
-              height={405}
-              className="my-4 rounded-lg border bg-muted transition-colors"
-            >
-              <source src={media} type="video/mp4" />
-            </video>
+            <VideoPlayer key={ind} src={media} />
           ) : (
             <Image
               src={media}
