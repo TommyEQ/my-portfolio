@@ -23,44 +23,22 @@ import { cn } from "@/lib/utils";
 import profileImg from "@/public/Headshot.jpeg";
 
 export const metadata: Metadata = {
-  title: pagesConfig.home.metadata.title,  // just "Home"
-  description: `${pagesConfig.home.metadata.description} This portfolio is customizable to showcase your skills and projects.`,
+  title: pagesConfig.home.metadata.title,
+  description: pagesConfig.home.metadata.description,
   alternates: {
     canonical: siteConfig.url,
   },
 };
 
-
-
 export default function IndexPage() {
-  // Structured data for personal portfolio
   const personSchema = {
     "@context": "https://schema.org",
     "@type": "Person",
     name: siteConfig.authorName,
     url: siteConfig.url,
     image: siteConfig.ogImage,
-    jobTitle: "Full Stack Developer",
+    jobTitle: "Mechanical Engineer",
     sameAs: [siteConfig.links.linkedin],
-  };
-
-  // Structured data for website as a software application (template)
-  const softwareSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    name: "Next.js Portfolio Template",
-    applicationCategory: "DeveloperApplication",
-    operatingSystem: "Web",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD",
-    },
-    author: {
-      "@type": "Person",
-      name: siteConfig.authorName,
-      url: siteConfig.url,
-    },
   };
 
   return (
@@ -69,11 +47,6 @@ export default function IndexPage() {
         id="schema-person"
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
-      />
-      <Script
-        id="schema-software"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
       />
 
       <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
@@ -108,37 +81,37 @@ export default function IndexPage() {
           </div>
 
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
-  <AnimatedText delay={0.6}>
-    <Link
-      href={siteConfig.links.linkedin}
-      target="_blank"
-      className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
-      aria-label="View Tomas Quesada's LinkedIn profile"
-    >
-      <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
-    </Link>
-  </AnimatedText>
-  <AnimatedText delay={0.8}>
-    <Link
-      href={"/contact"}
-      rel="noreferrer"
-      className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
-      aria-label="Contact Tomas Quesada"
-    >
-      <Icons.contact className="w-4 h-4 mr-2" /> Contact
-    </Link>
-  </AnimatedText>
-  <AnimatedText delay={1.0}>
-    <Link
-      href="/resume.pdf"
-      target="_blank"
-      className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
-      aria-label="View Tomas Quesada's Resume"
-    >
-      Resume
-    </Link>
-  </AnimatedText>
-</div>
+            <AnimatedText delay={0.6}>
+              <Link
+                href={siteConfig.links.linkedin}
+                target="_blank"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
+                aria-label="View Tomas Quesada's LinkedIn profile"
+              >
+                <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
+              </Link>
+            </AnimatedText>
+            <AnimatedText delay={0.8}>
+              <Link
+                href={"/contact"}
+                rel="noreferrer"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
+                aria-label="Contact Tomas Quesada"
+              >
+                <Icons.contact className="w-4 h-4 mr-2" /> Contact
+              </Link>
+            </AnimatedText>
+            <AnimatedText delay={1.0}>
+              <Link
+                href="/resume.pdf"
+                target="_blank"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
+                aria-label="View Tomas Quesada's Resume"
+              >
+                Resume
+              </Link>
+            </AnimatedText>
+          </div>
           <AnimatedText delay={1.2}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
@@ -184,40 +157,6 @@ export default function IndexPage() {
           </Link>
         </AnimatedText>
       </AnimatedSection>
-
-      {/* 
-      <AnimatedSection
-        direction="down"
-        className="container space-y-6 bg-muted py-10 my-14"
-        id="contributions"
-      >
-        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-          <AnimatedText
-            as="h2"
-            className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl"
-          >
-            {pagesConfig.contributions.title}
-          </AnimatedText>
-          <AnimatedText
-            as="p"
-            delay={0.2}
-            className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7"
-          >
-            {pagesConfig.contributions.description}
-          </AnimatedText>
-        </div>
-        <div className="mx-auto justify-center gap-4 md:w-full lg:grid-cols-3">
-          <ContributionCard contributions={featuredContributions} />
-        </div>
-        <AnimatedText delay={0.4} className="flex justify-center">
-          <Link href="/contributions">
-            <Button variant={"outline"} className="rounded-xl">
-              <Icons.chevronDown className="mr-2 h-4 w-4" /> View All
-            </Button>
-          </Link>
-        </AnimatedText>
-      </AnimatedSection>
-      */}
 
       <AnimatedSection
         direction="left"
