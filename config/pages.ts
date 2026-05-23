@@ -18,7 +18,7 @@ export const pagesConfig: PagesConfig = {
     description: "Welcome to my portfolio website.",
     metadata: {
       title: "Home",
-      description: "Tomas Quesada's portfolio website.",
+      description: "Mechanical engineer specializing in product design, FEA, and DFM. Portfolio of projects in prosthetics, robotics, and consumer electronics.",
     },
   },
   skills: {
