@@ -74,7 +74,7 @@ export const Projects: ProjectInterface[] = [
     id: "robo",
     companyName: "Hero Combat Robot",
     type: "Professional",
-    category: ["3D Modeling", "Manufacturing", "Rapid Prototyping"],
+    category: ["Robotics", "Manufacturing", "Mechanical Design"],
     shortDescription:
       "Served as mechanical lead for a university Hero robot competing in the DJI RoboMaster competition — designing, building, and refining systems for competitive robot combat.",
 
@@ -160,7 +160,7 @@ export const Projects: ProjectInterface[] = [
     id: "wood-coaster-holder",
     companyName: "Wood Coaster Holder",
     type: "Personal",
-    category: ["Manufacturing", "3D Modeling", "Rapid Prototyping"],
+    category: ["Manufacturing", "Product Design", "3D Modeling"],
 
     shortDescription:
       "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
@@ -236,7 +236,7 @@ export const Projects: ProjectInterface[] = [
     id: "streaming-device",
     companyName: "Gaming Streaming Device",
     type: "Personal",
-    category: ["3D Modeling", "Manufacturing"],
+    category: ["3D Modeling", "Manufacturing", "Product Design"],
     shortDescription:
       "Designed and 3D printed a custom enclosure for a Raspberry Pi-based gaming streaming device.",
 

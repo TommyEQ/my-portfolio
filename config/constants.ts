@@ -89,7 +89,12 @@ export type ValidCategory =
   | "3D Modeling"
   | "Simulation"
   | "Rapid Prototyping"
-  | "Analysis";
+  | "Analysis"
+  | "Product Design"
+  | "Mechanical Design"
+  | "Robotics"
+  | "Autonomous Systems"
+  | "Internship";
 
 export type ValidExpType = "Personal" | "Professional";
 
