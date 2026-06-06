@@ -74,7 +74,7 @@ export const Projects: ProjectInterface[] = [
     id: "robo",
     companyName: "Hero Combat Robot",
     type: "Professional",
-    category: ["3D Modeling", "Manufacturing", "Product Design"],
+    category: ["3D Modeling", "Manufacturing", "Rapid Prototyping"],
     shortDescription:
       "Served as mechanical lead for a university Hero robot competing in the DJI RoboMaster competition — designing, building, and refining systems for competitive robot combat.",
 
