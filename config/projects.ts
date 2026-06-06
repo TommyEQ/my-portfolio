@@ -160,7 +160,7 @@ export const Projects: ProjectInterface[] = [
     id: "wood-coaster-holder",
     companyName: "Wood Coaster Holder",
     type: "Personal",
-    category: ["Manufacturing", "Product Design", "3D Modeling"],
+    category: ["Manufacturing", "3D Modeling", "Rapid Prototyping"],
 
     shortDescription:
       "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
