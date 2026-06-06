@@ -105,9 +105,9 @@ export default function Project({ params }: ProjectPageProps) {
           <ModelViewer
             url={project.modelUrl}
             scale={project.modelScale}
-            cameraPosition={isRobo ? [0, 5, 20] : [0, 2, 5]}
-            minDistance={isRobo ? 30 : 2}
-            maxDistance={isRobo ? 100 : 10}
+            cameraPosition={isRobo ? [0, 2, 5] : [0, 2, 5]}
+minDistance={isRobo ? 2 : 2}
+maxDistance={isRobo ? 10 : 10}
             minPolarAngle={0}
             maxPolarAngle={Math.PI}
           />

@@ -83,7 +83,7 @@ export const Projects: ProjectInterface[] = [
 
     companyLogoImg: "/projects/robo/Robo1.webp",
     modelUrl: "/Robo6.glb",
-    modelScale: 1,
+    modelScale: 0.01,
 
     pagesInfoArr: [
       {
@@ -99,8 +99,8 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Served as Mechanical Lead for my university&apos;s Hero robot competing in the DJI RoboMaster competition — a world-renowned intercollegiate robotics battle where teams design, build, and pilot a fleet of robots to destroy the opposing team&apos;s base.",
-        "The Hero is the most powerful ground robot on the field, launching golf balls that deal significantly more damage than standard robots. Led full mechanical design and manufacturing efforts with a focus on performance and reliability.",
+       "Served as Mechanical Lead for my university's Hero robot competing in the DJI RoboMaster competition, a world-renowned intercollegiate robotics battle where teams design, build, and pilot a fleet of robots to destroy the opposing team's base.",
+      "The Hero is the most powerful ground robot on the field, launching golf balls that deal significantly more damage than standard robots. Led full mechanical design and manufacturing efforts with a focus on performance and reliability.",
       ],
       bullets: [
         "Served as Mechanical Lead overseeing design and manufacturing of the Hero robot.",
