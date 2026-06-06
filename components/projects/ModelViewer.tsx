@@ -27,7 +27,23 @@ function Model({ url, scale }: { url: string; scale: number }) {
   )
 }
 
-export default function ModelViewer({ url, scale = 0.01 }: { url: string; scale?: number }) {
+export default function ModelViewer({
+  url,
+  scale = 0.01,
+  cameraPosition = [0, 2, 5] as [number, number, number],
+  minDistance = 2,
+  maxDistance = 10,
+  minPolarAngle = 0,
+  maxPolarAngle = Math.PI,
+}: {
+  url: string
+  scale?: number
+  cameraPosition?: [number, number, number]
+  minDistance?: number
+  maxDistance?: number
+  minPolarAngle?: number
+  maxPolarAngle?: number
+}) {
   const [interacted, setInteracted] = useState(false)
 
   if (!url) return null
@@ -55,7 +71,7 @@ export default function ModelViewer({ url, scale = 0.01 }: { url: string; scale?
           </div>
         )}
         <Canvas
-          camera={{ position: [0, 2, 5], fov: 50 }}
+          camera={{ position: cameraPosition, fov: 50 }}
           onPointerDown={() => setInteracted(true)}
         >
           <ambientLight intensity={1} />
@@ -68,8 +84,10 @@ export default function ModelViewer({ url, scale = 0.01 }: { url: string; scale?
             autoRotate={false}
             enableZoom={true}
             enablePan={false}
-            minDistance={2}
-            maxDistance={10}
+            minDistance={minDistance}
+            maxDistance={maxDistance}
+            minPolarAngle={minPolarAngle}
+            maxPolarAngle={maxPolarAngle}
           />
         </Canvas>
       </div>
