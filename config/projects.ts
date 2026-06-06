@@ -28,8 +28,6 @@ export interface ProjectInterface {
 
 export const Projects: ProjectInterface[] = [
 
-
-
   {
     id: "asme-hpv",
     companyName: "ASME Human Powered Vehicle",
@@ -73,26 +71,27 @@ export const Projects: ProjectInterface[] = [
   },
 
   {
-    id: "betsy",
-    companyName: "Autonomous Maze Navigation Robot",
+    id: "robo",
+    companyName: "Hero Combat Robot",
     type: "Professional",
-    category: ["3D Modeling", "3D Printing", "Electronic Design"],
+    category: ["3D Modeling", "Manufacturing", "Mechanical Design"],
     shortDescription:
-      "Developed an autonomous robot capable of navigating a randomized maze and collecting tennis balls.",
+      "Served as mechanical lead for a university Hero robot competing in the DJI RoboMaster competition — designing, building, and refining systems for competitive robot combat.",
 
-    startDate: new Date("2024-04-20"),
-    endDate: new Date("2024-05-10"),
+    startDate: new Date("2024-09-01"),
+    endDate: new Date("2025-05-01"),
 
-    companyLogoImg: "/projects/betsy/betsy1.jpeg",
+    companyLogoImg: "/projects/robo/Robo1.webp",
+    modelUrl: "/Robo6.glb",
+    modelScale: 1,
 
     pagesInfoArr: [
       {
         imgArr: [
-          "/projects/betsy/betsy2.mov",
-          "/projects/betsy/betsy4.jpg",
-          "/projects/betsy/betsy3.mov",
-          "/projects/betsy/betsy5.jpeg",
-          "/projects/betsy/betsy6.jpeg",
+          "/projects/robo/Robo1.webp",
+          "/projects/robo/Robo2.mp4",
+          "/projects/robo/Robo3.webp",
+          "/projects/robo/Robo4.webp",
         ],
         title: "Landing Page",
       },
@@ -100,18 +99,20 @@ export const Projects: ProjectInterface[] = [
 
     descriptionDetails: {
       paragraphs: [
-        "Developed an autonomous robot integrating mechanical design, computer vision, and sensor fusion for maze navigation and object collection in a dynamic environment.",
+        "Served as Mechanical Lead for my university&apos;s Hero robot competing in the DJI RoboMaster competition — a world-renowned intercollegiate robotics battle where teams design, build, and pilot a fleet of robots to destroy the opposing team&apos;s base.",
+        "The Hero is the most powerful ground robot on the field, launching golf balls that deal significantly more damage than standard robots. Led full mechanical design and manufacturing efforts with a focus on performance and reliability.",
       ],
       bullets: [
-        "Designed tank chassis powered by regulated 20V system.",
-        "Integrated Nvidia compute unit, RealSense camera, and LiDAR for perception.",
-        "Implemented YOLO-based object detection for tennis ball collection.",
-        "Combined LiDAR + depth sensing for autonomous navigation.",
-        "Improved wall-following and navigation logic through testing.",
+        "Served as Mechanical Lead overseeing design and manufacturing of the Hero robot.",
+        "Redesigned the ball shooting mechanism for improved accuracy and reliability.",
+        "Improved suspension systems to enhance stability and field performance.",
+        "Collaborated with electrical and software subteams for full system integration.",
+        "Competed against university teams in the DJI RoboMaster intercollegiate competition.",
       ],
     },
   },
-{
+
+  {
     id: "case",
     companyName: "Custom Modular PC Case",
     type: "Personal",
@@ -126,7 +127,6 @@ export const Projects: ProjectInterface[] = [
     modelUrl: "/sffpc.glb",
     modelScale: 0.01,
 
-
     pagesInfoArr: [
       {
         imgArr: [
@@ -138,59 +138,61 @@ export const Projects: ProjectInterface[] = [
       },
     ],
 
-descriptionDetails: {
-  paragraphs: [
-    "Designed a compact, modular small form factor PC case focused on portability, thermal performance, and serviceability using CFD-driven airflow validation.",
-    "The enclosure fully integrates all PC components within a compact 425 × 142 × 137 mm volume, optimizing space efficiency while maintaining accessibility and structural rigidity.",
-  ],
-  bullets: [
-    "Designed modular aluminum extrusion frame for structural support and easy assembly/disassembly.",
-    "Used ABS/ASA 3D printing for custom structural and enclosure components with improved heat resistance.",
-    "Performed CFD simulations to optimize airflow paths and reduce thermal hotspots.",
-    "Integrated snap-fit SSD mounting mechanism for fast swapping and tool-less storage access.",
-    "Added side-mounted LCD display showing real-time CPU/GPU usage, CPU temperature, and memory load.",
-    "Implemented internal cable management strategy for improved airflow and clean assembly.",
-    "Designed rubber feet for improved stability, vibration damping, and desk grip.",
-    "Iterated design for manufacturability, assembly efficiency, and compact packaging constraints.",
+    descriptionDetails: {
+      paragraphs: [
+        "Designed a compact, modular small form factor PC case focused on portability, thermal performance, and serviceability using CFD-driven airflow validation.",
+        "The enclosure fully integrates all PC components within a compact 425 × 142 × 137 mm volume, optimizing space efficiency while maintaining accessibility and structural rigidity.",
+      ],
+      bullets: [
+        "Designed modular aluminum extrusion frame for structural support and easy assembly/disassembly.",
+        "Used ABS/ASA 3D printing for custom structural and enclosure components with improved heat resistance.",
+        "Performed CFD simulations to optimize airflow paths and reduce thermal hotspots.",
+        "Integrated snap-fit SSD mounting mechanism for fast swapping and tool-less storage access.",
+        "Added side-mounted LCD display showing real-time CPU/GPU usage, CPU temperature, and memory load.",
+        "Implemented internal cable management strategy for improved airflow and clean assembly.",
+        "Designed rubber feet for improved stability, vibration damping, and desk grip.",
+        "Iterated design for manufacturability, assembly efficiency, and compact packaging constraints.",
       ],
     },
   },
-{
-  id: "wood-coaster-holder",
-  companyName: "Wood Coaster Holder",
-  type: "Personal",
-  category: ["Manufacturing", "Product Design", "3D Modeling"],
 
-  shortDescription:
-    "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
+  {
+    id: "wood-coaster-holder",
+    companyName: "Wood Coaster Holder",
+    type: "Personal",
+    category: ["Manufacturing", "Product Design", "3D Modeling"],
 
-  startDate: new Date("2026-04-01"),
-  endDate: new Date("2026-04-15"),
+    shortDescription:
+      "Quick woodworking project focused on learning fabrication techniques and building a functional wooden coaster holder.",
 
-  companyLogoImg: "/projects/coaster/Coaster1.webp",
+    startDate: new Date("2026-04-01"),
+    endDate: new Date("2026-04-15"),
 
-  pagesInfoArr: [
-    {
-      title: "Landing Page",
-      imgArr: [
-        "/projects/coaster/Coaster2.webp",
-        "/projects/coaster/Coaster3.webp",
-        "/projects/coaster/Coaster4.webp",
+    companyLogoImg: "/projects/coaster/Coaster1.webp",
+
+    pagesInfoArr: [
+      {
+        title: "Landing Page",
+        imgArr: [
+          "/projects/coaster/Coaster2.webp",
+          "/projects/coaster/Coaster3.webp",
+          "/projects/coaster/Coaster4.webp",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Quick personal woodworking project focused on learning basic fabrication and producing a functional wooden coaster holder.",
+      ],
+      bullets: [
+        "Designed in SolidWorks with simple joinery concepts.",
+        "Fabricated using hardwood and basic woodworking tools.",
+        "Completed rapid end-to-end prototype build from design to final part.",
       ],
     },
-  ],
-
-  descriptionDetails: {
-    paragraphs: [
-      "Quick personal woodworking project focused on learning basic fabrication and producing a functional wooden coaster holder.",
-    ],
-    bullets: [
-      "Designed in SolidWorks with simple joinery concepts.",
-      "Fabricated using hardwood and basic woodworking tools.",
-      "Completed rapid end-to-end prototype build from design to final part.",
-    ],
   },
-},
+
   {
     id: "rocket",
     companyName: "Saturn V Model Rocket",
@@ -272,7 +274,7 @@ descriptionDetails: {
     companyName: "3D-Printed Mouse Bungee",
     modelUrl: "/Bungee.glb",
     modelScale: 0.0275,
-    
+
     type: "Personal",
     category: ["Mechanical Design", "3D Printing", "Product Design"],
     shortDescription:
@@ -305,6 +307,45 @@ descriptionDetails: {
     },
   },
 
+  {
+    id: "betsy",
+    companyName: "Autonomous Maze Navigation Robot",
+    type: "Professional",
+    category: ["3D Modeling", "3D Printing", "Electronic Design"],
+    shortDescription:
+      "Developed an autonomous robot capable of navigating a randomized maze and collecting tennis balls.",
+
+    startDate: new Date("2024-04-20"),
+    endDate: new Date("2024-05-10"),
+
+    companyLogoImg: "/projects/betsy/betsy1.jpeg",
+
+    pagesInfoArr: [
+      {
+        imgArr: [
+          "/projects/betsy/betsy2.mov",
+          "/projects/betsy/betsy4.jpg",
+          "/projects/betsy/betsy3.mov",
+          "/projects/betsy/betsy5.jpeg",
+          "/projects/betsy/betsy6.jpeg",
+        ],
+        title: "Landing Page",
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "Developed an autonomous robot integrating mechanical design, computer vision, and sensor fusion for maze navigation and object collection in a dynamic environment.",
+      ],
+      bullets: [
+        "Designed tank chassis powered by regulated 20V system.",
+        "Integrated Nvidia compute unit, RealSense camera, and LiDAR for perception.",
+        "Implemented YOLO-based object detection for tennis ball collection.",
+        "Combined LiDAR + depth sensing for autonomous navigation.",
+        "Improved wall-following and navigation logic through testing.",
+      ],
+    },
+  },
 
   {
     id: "crutch",
@@ -343,42 +384,42 @@ descriptionDetails: {
       ],
     },
   },
-{
-  id: "carnegie-racer",
-  companyName: "DARPA RACER Heavy Platform",
-  type: "Professional",
-  category: ["Internship", "Robotics", "Autonomous Systems", "FEA", "Mechanical Design"],
 
-  shortDescription:
-    "Supported mechanical design and hardware integration for the DARPA RACER off-road autonomous vehicle program.",
+  {
+    id: "carnegie-racer",
+    companyName: "DARPA RACER Heavy Platform",
+    type: "Professional",
+    category: ["Internship", "Robotics", "Autonomous Systems", "FEA", "Mechanical Design"],
 
-  startDate: new Date("2023-05-01"),
-  endDate: new Date("2023-08-01"),
+    shortDescription:
+      "Supported mechanical design and hardware integration for the DARPA RACER off-road autonomous vehicle program.",
 
-  companyLogoImg: "/projects/cr/cr1.webp",
+    startDate: new Date("2023-05-01"),
+    endDate: new Date("2023-08-01"),
 
-  pagesInfoArr: [
-    {
-      title: "Landing Page",
-      imgArr: [
-        "/projects/cr/cr2.webp",
-        "/projects/cr/cr3.mov",
+    companyLogoImg: "/projects/cr/cr1.webp",
+
+    pagesInfoArr: [
+      {
+        title: "Landing Page",
+        imgArr: [
+          "/projects/cr/cr2.webp",
+          "/projects/cr/cr3.mov",
+        ],
+      },
+    ],
+
+    descriptionDetails: {
+      paragraphs: [
+        "During my time as a mechanical engineering intern at Carnegie Robotics I supported the DARPA RACER program, contributing to the design and integration of hardware systems for autonomous tracked vehicles operating in off-road and high-impact environments. Work focused on ensuring mechanical robustness and reliable sensor integration under real-world conditions.",
+      ],
+      bullets: [
+        "Designed mechanical integration of LiDAR and stereo camera systems on a DARPA-funded autonomous tracked vehicle, including mounts, shielding, and interface constraints.",
+        "Supported field testing under real-world terrain and impact conditions, validating structural integrity and identifying failure modes in sensor mounts.",
+        "Designed and fabricated enclosures and mounting systems for autonomous platforms using SolidWorks, supporting multidisciplinary hardware integration.",
       ],
     },
-  ],
-
-  descriptionDetails: {
-    paragraphs: [
-      "During my time as a mechanical engineering intern at Carnegie Robotics I supported the DARPA RACER program, contributing to the design and integration of hardware systems for autonomous tracked vehicles operating in off-road and high-impact environments. Work focused on ensuring mechanical robustness and reliable sensor integration under real-world conditions.",
-    ],
-
-    bullets: [
-      "Designed mechanical integration of LiDAR and stereo camera systems on a DARPA-funded autonomous tracked vehicle, including mounts, shielding, and interface constraints.",
-      "Supported field testing under real-world terrain and impact conditions, validating structural integrity and identifying failure modes in sensor mounts.",
-      "Designed and fabricated enclosures and mounting systems for autonomous platforms using SolidWorks, supporting multidisciplinary hardware integration.",
-    ],
   },
-},
 
   {
     id: "garden",
