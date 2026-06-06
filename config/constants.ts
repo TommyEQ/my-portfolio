@@ -56,6 +56,8 @@ export type ValidSkills =
   | "Flutter"
   | "Dart"
   | "Flask"
+  | "Django"
+  | "FastAPI"
   | "SQL"
   | "NoSQL"
   | "DFM"
@@ -71,11 +73,7 @@ export type ValidSkills =
   | "Ansys"
   | "Matlab"
   | "Revit"
-  | "SolidWorks"
-  | "Mechanical Design"
-  | "Mechanisms"
-  | "Autonomous Systems"
-  | "Computer Vision";
+  | "SolidWorks";
 
 export type ValidCategory =
   | "Full Stack"
@@ -91,13 +89,7 @@ export type ValidCategory =
   | "3D Modeling"
   | "Simulation"
   | "Rapid Prototyping"
-  | "Analysis"
-  | "Robotics"
-  | "Autonomous Systems"
-  | "Computer Vision"
-  | "Mechanical Design"
-  | "Internship"
-  | "Product Design";
+  | "Analysis";
 
 export type ValidExpType = "Personal" | "Professional";
 
