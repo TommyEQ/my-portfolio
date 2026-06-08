@@ -52,7 +52,7 @@ export default function ProstheticHandPage() {
       {/* Hero image */}
       <div className="relative w-full rounded-xl overflow-hidden mb-10" style={{ aspectRatio: "4/3" }}>
         <Image
-          src="/projects/hand/hand4.webp"
+          src="/projects/hand/hand2.webp"
           alt="Prosthetic hand — front view"
           fill
           className="object-cover"
@@ -100,29 +100,29 @@ export default function ProstheticHandPage() {
         <h2 className="text-lg font-semibold text-foreground mb-4">Design &amp; build</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/hand1.webp"
-                alt="Palm internals showing dual-motor layout"
+                src="/projects/hand/hand4.webp"
+                alt="Full hand front view"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <p className="text-xs text-muted-foreground text-center mt-2">
-              Palm internals — two DC motors per half, prototype vs. final
+              Fully assembled hand — front view
             </p>
           </div>
           <div>
-            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/hand2.webp"
-                alt="Back-of-hand view"
+                src="/projects/hand/hand1.webp"
+                alt="Palm internals showing motor layout"
                 fill
                 className="object-cover"
               />
             </div>
             <p className="text-xs text-muted-foreground text-center mt-2">
-              Back-of-hand view showing groove-based TPU fingers
+              Palm internals — prototype vs. final motor layout
             </p>
           </div>
         </div>
@@ -170,9 +170,9 @@ export default function ProstheticHandPage() {
         <h2 className="text-lg font-semibold text-foreground mb-4">Grasping tests</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
-            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
               <Image
-                src="/projects/hand/hand6.webp"
+                src="/projects/hand/hand3.webp"
                 alt="Prosthetic hand grasping a cylindrical object"
                 fill
                 className="object-cover"
@@ -183,7 +183,7 @@ export default function ProstheticHandPage() {
             </p>
           </div>
           <div>
-            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
               <video
                 src="/projects/hand/hand5.mp4"
                 className="w-full h-full object-cover"
@@ -207,7 +207,7 @@ export default function ProstheticHandPage() {
         <h2 className="text-lg font-semibold text-foreground mb-4">Electronics &amp; control</h2>
         <div className="relative w-full rounded-lg overflow-hidden mb-2" style={{ aspectRatio: "16/9" }}>
           <Image
-            src="/projects/hand/hand3.webp"
+            src="/projects/hand/hand6.webp"
             alt="Arduino-based motor control board"
             fill
             className="object-cover"
