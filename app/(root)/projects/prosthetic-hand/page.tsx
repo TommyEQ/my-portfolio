@@ -106,7 +106,7 @@ export default function ProstheticHandPage() {
           <div className="flex flex-col">
             <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/handscan.png"
+                src="/projects/hand/handscan2.webp"
                 alt="3D hand scan used as anatomical reference"
                 fill
                 className="object-cover object-top"
