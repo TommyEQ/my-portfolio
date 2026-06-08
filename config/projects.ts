@@ -27,6 +27,27 @@ export interface ProjectInterface {
 }
 
 export const Projects: ProjectInterface[] = [
+  {
+  id: "prosthetic-hand",
+  companyName: "Groove-Based 3D Printed Prosthetic Hand",
+  type: "Professional",
+  category: ["Mechanical Design", "Robotics", "Product Design"],
+  shortDescription:
+    "Designed and fabricated a functional prosthetic hand using TPU soft robotics and a novel groove-based finger design — validated through ANSYS FEA, 30,000-cycle fatigue testing, and fingertip force benchmarking. Master's Thesis, Penn State 2025.",
+  startDate: new Date("2023-09-01"),
+  endDate: new Date("2025-05-01"),
+  companyLogoImg: "/projects/hand/hand4.webp",
+  pagesInfoArr: [
+    {
+      title: "Landing Page",
+      imgArr: [],
+    },
+  ],
+  descriptionDetails: {
+    paragraphs: [],
+    bullets: [],
+  },
+},
 
   {
     id: "asme-hpv",
@@ -112,6 +133,7 @@ export const Projects: ProjectInterface[] = [
     },
   },
 
+  
   {
     id: "case",
     companyName: "Custom Modular PC Case",
