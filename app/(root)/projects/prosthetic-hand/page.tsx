@@ -5,22 +5,22 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Prosthetic Hand | Tomas Quesada",
   description:
-    "Groove-based 3D printed prosthetic hand using TPU soft robotics — validated through ANSYS FEA, 30,000-cycle fatigue testing, and fingertip force benchmarking.",
+    "Groove-based 3D printed prosthetic hand using TPU soft robotics — validated through ANSYS FEA, 250,000-cycle fatigue testing, and fingertip force benchmarking.",
 };
 
 const tags = ["Mechanical Design", "Robotics", "Product Design"];
 
 const stats = [
-  { value: "62.8%", label: "Force efficiency at 90°" },
-  { value: "30,000", label: "Fatigue cycles completed" },
+  { value: "2.1×", label: "Stress reduction vs. non-grooved" },
+  { value: "250,000", label: "Fatigue cycles completed" },
   { value: "6", label: "Independent motors" },
-  { value: "~$200", label: "Estimated build cost" },
+  { value: "~$125", label: "Estimated build cost" },
 ];
 
 const bullets = [
   "Designed a novel groove-based TPU finger to reduce stress concentration and improve bending durability vs. conventional tendon-driven designs.",
   "Ran ANSYS parameter sensitivity studies (FEA) across groove height, thickness, and spacing — validated with response surface method statistical analysis.",
-  "Built a custom cyclic test bench with servo motor, tendon routing system, and load cell to run 30,000-cycle fatigue and force output experiments.",
+  "Built a custom cyclic test bench with servo motor, tendon routing system, and load cell to run 250,000-cycle fatigue and force output experiments.",
   "Integrated six DC motors, a servo-driven thumb, and Arduino-based control into a compact palm housing designed from 3D hand scans.",
   "Demonstrated power and precision grasps across rigid, soft, and irregular objects using the fully assembled hand.",
 ];
@@ -50,17 +50,17 @@ export default function ProstheticHandPage() {
       </p>
 
       {/* Hero image — centered portrait */}
-<div className="flex justify-center mb-10">
-  <div className="relative w-full sm:w-2/3 rounded-xl overflow-hidden" style={{ aspectRatio: "3/4" }}>
-    <Image
-      src="/projects/hand/hand2.webp"
-      alt="Prosthetic hand — front view"
-      fill
-      className="object-cover"
-      priority
-    />
-  </div>
-</div>
+      <div className="flex justify-center mb-10">
+        <div className="relative w-full sm:w-2/3 rounded-xl overflow-hidden" style={{ aspectRatio: "3/4" }}>
+          <Image
+            src="/projects/hand/hand2.webp"
+            alt="Prosthetic hand — front view"
+            fill
+            className="object-cover"
+            priority
+          />
+        </div>
+      </div>
 
       {/* Stats row */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
@@ -93,6 +93,47 @@ export default function ProstheticHandPage() {
             </li>
           ))}
         </ul>
+      </section>
+
+      <hr className="border-border mb-8" />
+
+      {/* Design Process */}
+      <section className="mb-10">
+        <h2 className="text-lg font-semibold text-foreground mb-4">Design process</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+          {/* Hand scan */}
+          <div>
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
+              <Image
+                src="/projects/hand/handscan.png"
+                alt="3D hand scan used as anatomical reference"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-2">
+              Artec Space Spider 3D scan — used as anatomical reference for finger and palm geometry
+            </p>
+          </div>
+
+          {/* CAD placeholder — replace src with your exploded view image when ready */}
+          <div>
+            <div
+              className="relative w-full rounded-lg overflow-hidden bg-secondary flex items-center justify-center"
+              style={{ aspectRatio: "4/3" }}
+            >
+              <p className="text-sm text-muted-foreground text-center px-4">
+                CAD exploded assembly view<br />
+                <span className="text-xs">(coming soon)</span>
+              </p>
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-2">
+              SolidWorks exploded assembly — finger, palm, and motor housing components
+            </p>
+          </div>
+
+        </div>
       </section>
 
       <hr className="border-border mb-8" />
@@ -142,7 +183,7 @@ export default function ProstheticHandPage() {
             />
           </div>
           <p className="text-xs text-muted-foreground text-center mt-2">
-            Palm internals — Final motor layout (DC motors + servo thumb)
+            Palm internals — final motor layout (DC motors + servo thumb)
           </p>
         </div>
       </section>
@@ -152,6 +193,45 @@ export default function ProstheticHandPage() {
       {/* Research Data */}
       <section className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Research data</h2>
+
+        {/* FEA comparison */}
+        <div className="mb-6">
+          <p className="text-sm text-muted-foreground mb-3">
+            ANSYS finite element analysis comparing Von Mises stress between the grooved and
+            non-grooved finger designs under identical 20 mm tendon displacement loading. The groove
+            pattern reduces peak stress by more than 50%, directly extending fatigue life.
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <div className="relative w-full rounded-lg overflow-hidden bg-white" style={{ aspectRatio: "4/3" }}>
+                <Image
+                  src="/projects/hand/groovefea.png"
+                  alt="FEA Von Mises stress — grooved finger"
+                  fill
+                  className="object-contain p-2"
+                />
+              </div>
+              <p className="text-xs text-muted-foreground text-center mt-2">
+                Grooved finger — max stress 1.656 Pa
+              </p>
+            </div>
+            <div>
+              <div className="relative w-full rounded-lg overflow-hidden bg-white" style={{ aspectRatio: "4/3" }}>
+                <Image
+                  src="/projects/hand/nongroovefea.png"
+                  alt="FEA Von Mises stress — non-grooved finger"
+                  fill
+                  className="object-contain p-2"
+                />
+              </div>
+              <p className="text-xs text-muted-foreground text-center mt-2">
+                Non-grooved finger — max stress 3.578 Pa
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* RSM plots + force chart */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
             <div className="relative w-full rounded-lg overflow-hidden bg-white" style={{ aspectRatio: "16/9" }}>
@@ -198,7 +278,7 @@ export default function ProstheticHandPage() {
               />
             </div>
             <p className="text-xs text-muted-foreground text-center mt-2">
-              Power grasp — Deodorant
+              Power grasp — deodorant
             </p>
           </div>
           <div>
