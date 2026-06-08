@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next"; 
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Prosthetic Hand | Tomas Quesada",
@@ -102,11 +102,11 @@ export default function ProstheticHandPage() {
         <h2 className="text-lg font-semibold text-foreground mb-4">Design process</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-          {/* Hand scan — portrait to match natural image proportions */}
+          {/* Hand scan */}
           <div className="flex flex-col">
             <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/handscan2.webp"
+                src="/projects/hand/handscan.png"
                 alt="3D hand scan used as anatomical reference"
                 fill
                 className="object-cover object-top"
@@ -117,19 +117,20 @@ export default function ProstheticHandPage() {
             </p>
           </div>
 
-{/* CAD exploded assembly */}
-<div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
-  <Image
-    src="/projects/hand/handcad.jpg"
-    alt="SolidWorks exploded assembly view"
-    fill
-    className="object-cover"
-  />
-</div>
-  <p className="text-xs text-muted-foreground text-center mt-2">
-    SolidWorks exploded assembly — finger, palm, and motor housing components
-  </p>
-</div>
+          {/* CAD exploded assembly */}
+          <div className="flex flex-col">
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
+              <Image
+                src="/projects/hand/handcad.jpg"
+                alt="SolidWorks exploded assembly view"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <p className="text-xs text-muted-foreground text-center mt-2">
+              SolidWorks exploded assembly — finger, palm, and motor housing components
+            </p>
+          </div>
 
         </div>
       </section>
@@ -192,7 +193,7 @@ export default function ProstheticHandPage() {
       <section className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Research data</h2>
 
-        {/* FEA comparison — no white background, object-cover fills cleanly */}
+        {/* FEA comparison */}
         <div className="mb-6">
           <p className="text-sm text-muted-foreground mb-3">
             ANSYS finite element analysis comparing Von Mises stress between the grooved and
@@ -203,7 +204,7 @@ export default function ProstheticHandPage() {
             <div>
               <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/projects/hand/fea1.jpg"
+                  src="/projects/hand/groovefea.png"
                   alt="FEA Von Mises stress — grooved finger"
                   fill
                   className="object-cover"
@@ -216,7 +217,7 @@ export default function ProstheticHandPage() {
             <div>
               <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/projects/hand/fea2.jpg"
+                  src="/projects/hand/nongroovefea.png"
                   alt="FEA Von Mises stress — non-grooved finger"
                   fill
                   className="object-cover"
