@@ -173,7 +173,7 @@ export default function ProstheticHandPage() {
 
         {/* Full-width internals shot */}
         <div>
-          <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "16/9" }}>
+          <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "5/4" }}>
             <Image
               src="/projects/hand/hand3.webp"
               alt="Palm internals showing motor layout comparison"
