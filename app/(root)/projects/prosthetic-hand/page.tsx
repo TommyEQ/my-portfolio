@@ -121,7 +121,7 @@ export default function ProstheticHandPage() {
           <div className="flex flex-col">
             <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/handcad.jpg"
+                src="/projects/hand/handcad1.jpg"
                 alt="SolidWorks exploded assembly view"
                 fill
                 className="object-cover"
