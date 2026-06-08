@@ -36,7 +36,7 @@ export const Projects: ProjectInterface[] = [
     "Designed and fabricated a functional prosthetic hand using TPU soft robotics and a novel groove-based finger design — validated through ANSYS FEA, 30,000-cycle fatigue testing, and fingertip force benchmarking. Master's Thesis, Penn State 2025.",
   startDate: new Date("2023-09-01"),
   endDate: new Date("2025-05-01"),
-  companyLogoImg: "/projects/hand/hand4.webp",
+  companyLogoImg: "/projects/hand/hand1.webp",
   pagesInfoArr: [
     {
       title: "Landing Page",
