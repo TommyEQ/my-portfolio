@@ -49,16 +49,18 @@ export default function ProstheticHandPage() {
         Master&apos;s Thesis &middot; Penn State Mechanical Engineering &middot; 2025
       </p>
 
-      {/* Hero image — portrait crop to show full hand */}
-      <div className="relative w-full rounded-xl overflow-hidden mb-10" style={{ aspectRatio: "3/4", maxHeight: "600px" }}>
-        <Image
-          src="/projects/hand/hand2.webp"
-          alt="Prosthetic hand — front view"
-          fill
-          className="object-cover object-top"
-          priority
-        />
-      </div>
+      {/* Hero image — centered portrait */}
+<div className="flex justify-center mb-10">
+  <div className="relative w-full sm:w-2/3 rounded-xl overflow-hidden" style={{ aspectRatio: "3/4" }}>
+    <Image
+      src="/projects/hand/hand2.webp"
+      alt="Prosthetic hand — front view"
+      fill
+      className="object-cover"
+      priority
+    />
+  </div>
+</div>
 
       {/* Stats row */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
@@ -104,7 +106,7 @@ export default function ProstheticHandPage() {
           <div>
             <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/hand2.webp"
+                src="/projects/hand/hand1.webp"
                 alt="Prosthetic hand front view"
                 fill
                 className="object-cover object-top"
@@ -117,7 +119,7 @@ export default function ProstheticHandPage() {
           <div>
             <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/hand4.webp"
+                src="/projects/hand/hand2.webp"
                 alt="Prosthetic hand back view"
                 fill
                 className="object-cover object-top"
@@ -133,14 +135,14 @@ export default function ProstheticHandPage() {
         <div>
           <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "16/9" }}>
             <Image
-              src="/projects/hand/hand1.webp"
+              src="/projects/hand/hand3.webp"
               alt="Palm internals showing motor layout comparison"
               fill
               className="object-cover"
             />
           </div>
           <p className="text-xs text-muted-foreground text-center mt-2">
-            Palm internals — prototype vs. final motor layout (DC motors + servo thumb)
+            Palm internals — Final motor layout (DC motors + servo thumb)
           </p>
         </div>
       </section>
@@ -189,14 +191,14 @@ export default function ProstheticHandPage() {
           <div>
             <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
               <Image
-                src="/projects/hand/hand3.webp"
+                src="/projects/hand/hand4.webp"
                 alt="Prosthetic hand grasping a cylindrical object"
                 fill
                 className="object-cover"
               />
             </div>
             <p className="text-xs text-muted-foreground text-center mt-2">
-              Power grasp — cylindrical object
+              Power grasp — Deodorant
             </p>
           </div>
           <div>
