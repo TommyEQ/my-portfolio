@@ -117,21 +117,20 @@ export default function ProstheticHandPage() {
             </p>
           </div>
 
-          {/* CAD placeholder — replace with Image once you have the file */}
-          <div className="flex flex-col">
-            <div
-              className="relative w-full rounded-lg overflow-hidden bg-secondary flex items-center justify-center"
-              style={{ aspectRatio: "3/4" }}
-            >
-              <p className="text-sm text-muted-foreground text-center px-4">
-                CAD exploded assembly view<br />
-                <span className="text-xs">(coming soon)</span>
-              </p>
-            </div>
-            <p className="text-xs text-muted-foreground text-center mt-2">
-              SolidWorks exploded assembly — finger, palm, and motor housing components
-            </p>
-          </div>
+{/* CAD exploded assembly */}
+<div className="flex flex-col">
+  <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
+    <Image
+      src="/projects/hand/handcad.jpg"
+      alt="SolidWorks exploded assembly view"
+      fill
+      className="object-cover"
+    />
+  </div>
+  <p className="text-xs text-muted-foreground text-center mt-2">
+    SolidWorks exploded assembly — finger, palm, and motor housing components
+  </p>
+</div>
 
         </div>
       </section>
