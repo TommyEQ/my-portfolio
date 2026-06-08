@@ -119,14 +119,14 @@ export default function ProstheticHandPage() {
 
 {/* CAD exploded assembly */}
 <div className="flex flex-col">
-  <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "16/9" }}>
-    <Image
-      src="/projects/hand/handcad.jpg"
-      alt="SolidWorks exploded assembly view"
-      fill
-      className="object-cover"
-    />
-  </div>
+  <div className="relative w-full rounded-lg overflow-hidden bg-secondary" style={{ aspectRatio: "3/4" }}>
+  <Image
+    src="/projects/hand/handcad.png"
+    alt="SolidWorks exploded assembly view"
+    fill
+    className="object-contain p-2"
+  />
+</div>
   <p className="text-xs text-muted-foreground text-center mt-2">
     SolidWorks exploded assembly — finger, palm, and motor housing components
   </p>
