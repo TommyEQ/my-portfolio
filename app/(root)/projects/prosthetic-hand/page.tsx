@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { Metadata } from "next";
+import type { Metadata } from "next"; 
 
 export const metadata: Metadata = {
   title: "Prosthetic Hand | Tomas Quesada",
@@ -121,7 +121,7 @@ export default function ProstheticHandPage() {
 <div className="flex flex-col">
   <div className="relative w-full rounded-lg overflow-hidden bg-secondary" style={{ aspectRatio: "3/4" }}>
   <Image
-    src="/projects/hand/handcad.png"
+    src="/projects/hand/handcad.jpg"
     alt="SolidWorks exploded assembly view"
     fill
     className="object-contain p-2"
