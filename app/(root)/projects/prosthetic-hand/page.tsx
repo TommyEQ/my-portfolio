@@ -102,14 +102,14 @@ export default function ProstheticHandPage() {
         <h2 className="text-lg font-semibold text-foreground mb-4">Design process</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
-          {/* Hand scan */}
-          <div>
-            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
+          {/* Hand scan — portrait to match natural image proportions */}
+          <div className="flex flex-col">
+            <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "3/4" }}>
               <Image
-                src="/projects/hand/handscan.webp"
+                src="/projects/hand/handscan.png"
                 alt="3D hand scan used as anatomical reference"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <p className="text-xs text-muted-foreground text-center mt-2">
@@ -117,11 +117,11 @@ export default function ProstheticHandPage() {
             </p>
           </div>
 
-          {/* CAD placeholder — replace src with your exploded view image when ready */}
-          <div>
+          {/* CAD placeholder — replace with Image once you have the file */}
+          <div className="flex flex-col">
             <div
               className="relative w-full rounded-lg overflow-hidden bg-secondary flex items-center justify-center"
-              style={{ aspectRatio: "4/3" }}
+              style={{ aspectRatio: "3/4" }}
             >
               <p className="text-sm text-muted-foreground text-center px-4">
                 CAD exploded assembly view<br />
@@ -194,7 +194,7 @@ export default function ProstheticHandPage() {
       <section className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Research data</h2>
 
-        {/* FEA comparison */}
+        {/* FEA comparison — no white background, object-cover fills cleanly */}
         <div className="mb-6">
           <p className="text-sm text-muted-foreground mb-3">
             ANSYS finite element analysis comparing Von Mises stress between the grooved and
@@ -203,12 +203,12 @@ export default function ProstheticHandPage() {
           </p>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <div className="relative w-full rounded-lg overflow-hidden bg-white" style={{ aspectRatio: "4/3" }}>
+              <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/projects/hand/groovefea.webp"
+                  src="/projects/hand/groovefea.png"
                   alt="FEA Von Mises stress — grooved finger"
                   fill
-                  className="object-contain p-2"
+                  className="object-cover"
                 />
               </div>
               <p className="text-xs text-muted-foreground text-center mt-2">
@@ -216,12 +216,12 @@ export default function ProstheticHandPage() {
               </p>
             </div>
             <div>
-              <div className="relative w-full rounded-lg overflow-hidden bg-white" style={{ aspectRatio: "4/3" }}>
+              <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/projects/hand/nongroovefea.webp"
+                  src="/projects/hand/nongroovefea.png"
                   alt="FEA Von Mises stress — non-grooved finger"
                   fill
-                  className="object-contain p-2"
+                  className="object-cover"
                 />
               </div>
               <p className="text-xs text-muted-foreground text-center mt-2">
