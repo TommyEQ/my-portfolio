@@ -205,7 +205,7 @@ export default function ProstheticHandPage() {
             <div>
               <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/projects/hand/groovefea.webp"
+                  src="/projects/hand/fea1.jpg"
                   alt="FEA Von Mises stress — grooved finger"
                   fill
                   className="object-cover"
@@ -218,7 +218,7 @@ export default function ProstheticHandPage() {
             <div>
               <div className="relative w-full rounded-lg overflow-hidden" style={{ aspectRatio: "4/3" }}>
                 <Image
-                  src="/projects/hand/nongroovefea.webp"
+                  src="/projects/hand/fea2.jpg"
                   alt="FEA Von Mises stress — non-grooved finger"
                   fill
                   className="object-cover"
