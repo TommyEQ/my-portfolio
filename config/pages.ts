@@ -72,4 +72,13 @@ export const pagesConfig: PagesConfig = {
         "Tomas Quesada's professional journey and experience timeline.",
     },
   },
+  notebook: {
+    title: "Notebook",
+    description: "Flip through pages from my physical design notebook.",
+    metadata: {
+      title: "Notebook",
+      description:
+        "Scanned pages from Tomas Quesada's physical design notebook — sketches and notes spanning his engineering projects.",
+    },
+  },
 };

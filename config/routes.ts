@@ -13,6 +13,10 @@ export const routesConfig: any = {
       href: "/projects",
     },
     {
+      title: "Notebook",
+      href: "/notebook",
+    },
+    {
       title: "Experience",
       href: "/experience",
     },
