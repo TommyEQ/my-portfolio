@@ -1,4 +1,4 @@
-import { ValidCategory, ValidExpType, ValidSkills } from "./constants";
+import { ValidCategory, ValidExpType } from "./constants";
 
 interface PagesInfoInterface {
   title: string;
@@ -33,7 +33,7 @@ export const Projects: ProjectInterface[] = [
   type: "Professional",
   category: ["Mechanical Design", "Robotics", "Product Design"],
   shortDescription:
-    "Designed and fabricated a functional prosthetic hand using TPU soft robotics and a novel groove-based finger design — validated through ANSYS FEA, 30,000-cycle fatigue testing, and fingertip force benchmarking. Master's Thesis, Penn State 2025.",
+    "Designed and fabricated a functional prosthetic hand using TPU soft robotics and a novel groove-based finger design — validated through ANSYS FEA, 250,000-cycle fatigue testing, and fingertip force benchmarking. Master's Thesis, Penn State 2025.",
   startDate: new Date("2023-09-01"),
   endDate: new Date("2025-05-01"),
   companyLogoImg: "/projects/hand/hand1.webp",

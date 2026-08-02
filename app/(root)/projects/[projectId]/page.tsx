@@ -47,7 +47,7 @@ export default function Project({ params }: ProjectPageProps) {
       </Link>
       <div>
         <time
-          dateTime={Date.now().toString()}
+          dateTime={project.startDate.toISOString()}
           className="block text-sm text-muted-foreground"
         >
           {formatDateFromObj(project.startDate)}
@@ -63,7 +63,7 @@ export default function Project({ params }: ProjectPageProps) {
           >
             <Image
               src={profileImg}
-              alt={"naman"}
+              alt={"Tomas Quesada"}
               width={42}
               height={42}
               className="rounded-full bg-background"
