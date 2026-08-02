@@ -156,10 +156,10 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
             autoSize={true}
             maxShadowOpacity={0.5}
             clickEventForward={true}
-            useMouseEvents={true}
+            useMouseEvents={false}
             swipeDistance={30}
-            showPageCorners={true}
-            disableFlipByClick={false}
+            showPageCorners={false}
+            disableFlipByClick={true}
             ref={flipBookRef}
           >
             {pages.map((page, index) => (
