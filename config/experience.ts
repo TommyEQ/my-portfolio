@@ -16,12 +16,27 @@ export interface ExperienceInterface {
 
 export const experiences: ExperienceInterface[] = [
   {
+    id: "agilityrobotics",
+    position: "Mechanical Engineer",
+    company: "Agility Robotics",
+    location: "Bay Area, CA",
+    startDate: new Date("2026-08-01"),
+    endDate: "Present",
+    description: [
+      "Mechanical engineer on the Mechanical Engineering team at Agility Robotics, building humanoid robots for warehouse environments.",
+    ],
+    achievements: [],
+    skills: ["SolidWorks", "DFM", "DFA", "Rapid Prototyping"],
+    companyUrl: "https://agilityrobotics.com",
+    logo: "/agility.jpg",
+  },
+  {
     id: "garmin",
     position: "Mechanical Engineer",
     company: "Garmin",
     location: "Kansas City, KS",
-    startDate: new Date("2024-08-01"),
-    endDate: "Present",
+    startDate: new Date("2025-08-01"),
+    endDate: new Date("2026-08-01"),
     description: [
       "Mechanical engineer in the Marine Department at Garmin, contributing to the design, testing, and validation of GPS and marine electronics products. Gaining hands-on experience in the intersection of mechanical design, materials testing, and industrial product development.",
 
