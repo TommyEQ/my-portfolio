@@ -67,8 +67,11 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
     setCurrentPage(e.data);
   }, []);
 
-  const flipToPage = useCallback((index: number) => {
-    flipBookRef.current?.pageFlip()?.flip(index);
+  // Instant jump, no flip animation — used by the slider so dragging
+  // through many pages quickly doesn't queue up animations and lag.
+  const jumpToPage = useCallback((index: number) => {
+    flipBookRef.current?.pageFlip()?.turnToPage(index);
+    setCurrentPage(index);
   }, []);
 
   const flipPrev = useCallback(() => {
@@ -89,7 +92,7 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="flex w-full max-w-2xl items-center justify-center gap-3 sm:gap-6">
+      <div className="flex w-full max-w-4xl items-center justify-center gap-3 sm:gap-6">
         <button
           type="button"
           onClick={flipPrev}
@@ -103,14 +106,14 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
           <Icons.chevronLeft className="h-4 w-4" />
         </button>
 
-        <div className="w-full max-w-sm sm:max-w-md" style={{ aspectRatio: `${PAGE_WIDTH}/${PAGE_HEIGHT}` }}>
+        <div className="flex min-w-0 flex-1 justify-center">
           <HTMLFlipBook
             width={PAGE_WIDTH}
             height={PAGE_HEIGHT}
             size="stretch"
-            minWidth={200}
+            minWidth={220}
             maxWidth={PAGE_WIDTH}
-            minHeight={280}
+            minHeight={293}
             maxHeight={PAGE_HEIGHT}
             showCover={false}
             mobileScrollSupport={true}
@@ -157,7 +160,7 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
           min={0}
           max={pages.length - 1}
           value={currentPage}
-          onChange={(e) => flipToPage(Number(e.target.value))}
+          onChange={(e) => jumpToPage(Number(e.target.value))}
           className="w-full accent-primary"
           aria-label="Jump to page"
         />

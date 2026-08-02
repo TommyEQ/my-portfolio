@@ -3,7 +3,8 @@ import dynamic from "next/dynamic";
 
 import { AnimatedSection } from "@/components/common/animated-section";
 import PageContainer from "@/components/common/page-container";
-import { notebookPages } from "@/config/notebook";
+import { ResponsiveTabs } from "@/components/ui/responsive-tabs";
+import { notebooks } from "@/config/notebook";
 import { pagesConfig } from "@/config/pages";
 
 const NotebookViewer = dynamic(
@@ -17,13 +18,23 @@ export const metadata: Metadata = {
 };
 
 export default function NotebookPage() {
+  const tabItems = notebooks.map((notebook) => ({
+    value: notebook.id,
+    label: notebook.title,
+    content: <NotebookViewer pages={notebook.pages} />,
+  }));
+
   return (
     <PageContainer
       title={pagesConfig.notebook.title}
       description={pagesConfig.notebook.description}
     >
       <AnimatedSection>
-        <NotebookViewer pages={notebookPages} />
+        {tabItems.length > 1 ? (
+          <ResponsiveTabs items={tabItems} defaultValue={tabItems[0]?.value} />
+        ) : (
+          tabItems[0]?.content
+        )}
       </AnimatedSection>
     </PageContainer>
   );
