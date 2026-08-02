@@ -31,6 +31,7 @@ import {
   User,
   X,
   Zap,
+  ZoomIn,
 } from "lucide-react";
 import { AiFillStar } from "react-icons/ai";
 import { BiLaugh, BiSolidUser } from "react-icons/bi";
@@ -82,6 +83,7 @@ export const Icons = {
   spinner: Loader2,
   chevronLeft: ChevronLeft,
   chevronRight: ChevronRight,
+  zoomIn: ZoomIn,
   trash: Trash,
   post: FileText,
   page: File,

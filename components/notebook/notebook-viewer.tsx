@@ -7,6 +7,7 @@ import HTMLFlipBook from "react-pageflip";
 
 import { Icons } from "@/components/common/icons";
 import { buttonVariants } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { NotebookPageEntry } from "@/config/notebook";
 import { cn } from "@/lib/utils";
 
@@ -17,10 +18,11 @@ const PAGE_HEIGHT = 660;
 interface NotebookPageProps {
   page: NotebookPageEntry;
   pageNumber: number;
+  onZoom: () => void;
 }
 
 const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
-  ({ page, pageNumber }, ref) => (
+  ({ page, pageNumber, onZoom }, ref) => (
     <div ref={ref} className="relative w-full h-full bg-secondary">
       <Image
         src={page.image}
@@ -29,6 +31,17 @@ const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
         sizes={`(max-width: 640px) 100vw, ${PAGE_WIDTH}px`}
         className="object-cover"
       />
+      <button
+        type="button"
+        onClick={onZoom}
+        aria-label={`Zoom in on page ${pageNumber}`}
+        className={cn(
+          buttonVariants({ variant: "outline", size: "icon" }),
+          "absolute top-2 left-2 h-8 w-8 bg-background/90 backdrop-blur-sm"
+        )}
+      >
+        <Icons.zoomIn className="h-4 w-4" />
+      </button>
       {page.projectId && (
         <Link
           href={`/projects/${page.projectId}`}
@@ -64,6 +77,7 @@ interface NotebookViewerProps {
 export default function NotebookViewer({ pages }: NotebookViewerProps) {
   const flipBookRef = useRef<{ pageFlip: () => any } | null>(null);
   const [currentPage, setCurrentPage] = useState(0);
+  const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
 
   const handleFlip = useCallback((e: { data: number }) => {
     setCurrentPage(e.data);
@@ -83,6 +97,18 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
   const flipNext = useCallback(() => {
     flipBookRef.current?.pageFlip()?.flipNext();
   }, []);
+
+  // When the lightbox closes, sync the book to whatever page was last
+  // shown there (the user may have browsed with the lightbox's own
+  // prev/next without the book behind it moving).
+  const closeZoom = useCallback(() => {
+    setZoomedIndex((index) => {
+      if (index !== null) jumpToPage(index);
+      return null;
+    });
+  }, [jumpToPage]);
+
+  const zoomedPage = zoomedIndex !== null ? pages[zoomedIndex] : null;
 
   if (pages.length === 0) {
     return (
@@ -137,7 +163,12 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
             ref={flipBookRef}
           >
             {pages.map((page, index) => (
-              <NotebookPage key={page.image} page={page} pageNumber={index + 1} />
+              <NotebookPage
+                key={page.image}
+                page={page}
+                pageNumber={index + 1}
+                onZoom={() => setZoomedIndex(index)}
+              />
             ))}
           </HTMLFlipBook>
         </div>
@@ -170,6 +201,83 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
           Page {currentPage + 1} of {pages.length}
         </span>
       </div>
+
+      <Dialog open={zoomedIndex !== null} onOpenChange={(open) => !open && closeZoom()}>
+        <DialogContent className="max-w-4xl w-[92vw] gap-3 bg-background p-3 sm:p-4">
+          <DialogTitle className="sr-only">
+            {zoomedIndex !== null ? `Notebook page ${zoomedIndex + 1}` : "Notebook page"}
+          </DialogTitle>
+          {zoomedPage && zoomedIndex !== null && (
+            <>
+              <div className="relative flex items-center justify-center gap-2 sm:gap-4">
+                <button
+                  type="button"
+                  onClick={() => setZoomedIndex((i) => Math.max(0, (i ?? 0) - 1))}
+                  disabled={zoomedIndex === 0}
+                  aria-label="Previous page"
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "icon" }),
+                    "shrink-0"
+                  )}
+                >
+                  <Icons.chevronLeft className="h-4 w-4" />
+                </button>
+
+                <div
+                  className="relative w-full min-w-0"
+                  style={{ aspectRatio: `${PAGE_WIDTH}/${PAGE_HEIGHT}`, maxHeight: "80vh" }}
+                >
+                  <Image
+                    src={zoomedPage.image}
+                    alt={zoomedPage.caption ?? `Notebook page ${zoomedIndex + 1}`}
+                    fill
+                    sizes="92vw"
+                    className="object-contain"
+                    priority
+                  />
+                </div>
+
+                <button
+                  type="button"
+                  onClick={() =>
+                    setZoomedIndex((i) => Math.min(pages.length - 1, (i ?? 0) + 1))
+                  }
+                  disabled={zoomedIndex === pages.length - 1}
+                  aria-label="Next page"
+                  className={cn(
+                    buttonVariants({ variant: "outline", size: "icon" }),
+                    "shrink-0"
+                  )}
+                >
+                  <Icons.chevronRight className="h-4 w-4" />
+                </button>
+              </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-2 text-sm">
+                <div>
+                  {zoomedPage.date && (
+                    <span className="font-medium text-foreground">{zoomedPage.date}</span>
+                  )}
+                  {zoomedPage.caption && (
+                    <span className="text-muted-foreground">
+                      {zoomedPage.date ? " — " : ""}
+                      {zoomedPage.caption}
+                    </span>
+                  )}
+                </div>
+                {zoomedPage.projectId && (
+                  <Link
+                    href={`/projects/${zoomedPage.projectId}`}
+                    className={cn(buttonVariants({ variant: "outline", size: "sm" }))}
+                  >
+                    View project
+                  </Link>
+                )}
+              </div>
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 }
