@@ -24,7 +24,7 @@ export const notebooks: NotebookEntry[] = [
     id: "book-1",
     title: "Notebook 1",
     pages: BOOK_1_PAGE_NUMBERS.map((n) => ({
-      image: `/notebook/book-1/page${n}.jpg`,
+      image: `/notebook/book-1/page${n}.webp`,
     })),
   },
   // Add a second entry here once the next notebook is scanned, e.g.:

@@ -26,6 +26,7 @@ const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
         src={page.image}
         alt={page.caption ?? `Notebook page ${pageNumber}`}
         fill
+        sizes={`(max-width: 640px) 100vw, ${PAGE_WIDTH}px`}
         className="object-cover"
       />
       {page.projectId && (
