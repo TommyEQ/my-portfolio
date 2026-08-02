@@ -10,8 +10,9 @@ import { buttonVariants } from "@/components/ui/button";
 import { NotebookPageEntry } from "@/config/notebook";
 import { cn } from "@/lib/utils";
 
-const PAGE_WIDTH = 450;
-const PAGE_HEIGHT = 600;
+// Matches the ~0.82 aspect ratio of the actual scans (roughly 2545x3100px).
+const PAGE_WIDTH = 540;
+const PAGE_HEIGHT = 660;
 
 interface NotebookPageProps {
   page: NotebookPageEntry;
@@ -25,7 +26,7 @@ const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
         src={page.image}
         alt={page.caption ?? `Notebook page ${pageNumber}`}
         fill
-        className="object-contain"
+        className="object-cover"
       />
       {page.projectId && (
         <Link
@@ -92,7 +93,7 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="flex w-full max-w-4xl items-center justify-center gap-3 sm:gap-6">
+      <div className="flex w-full max-w-6xl items-center justify-center gap-3 sm:gap-6">
         <button
           type="button"
           onClick={flipPrev}
@@ -111,9 +112,9 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
             width={PAGE_WIDTH}
             height={PAGE_HEIGHT}
             size="stretch"
-            minWidth={220}
+            minWidth={260}
             maxWidth={PAGE_WIDTH}
-            minHeight={293}
+            minHeight={318}
             maxHeight={PAGE_HEIGHT}
             showCover={false}
             mobileScrollSupport={true}
@@ -154,7 +155,7 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
         </button>
       </div>
 
-      <div className="flex w-full max-w-md flex-col items-center gap-2">
+      <div className="flex w-full max-w-2xl flex-col items-center gap-2">
         <input
           type="range"
           min={0}
