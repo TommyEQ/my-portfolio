@@ -23,7 +23,7 @@ interface NotebookPageProps {
 
 const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
   ({ page, pageNumber, onZoom }, ref) => (
-    <div ref={ref} className="relative w-full h-full bg-secondary">
+    <div ref={ref} className="group relative w-full h-full bg-secondary">
       <Image
         src={page.image}
         alt={page.caption ?? `Notebook page ${pageNumber}`}
@@ -37,7 +37,7 @@ const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
         aria-label={`Zoom in on page ${pageNumber}`}
         className={cn(
           buttonVariants({ variant: "outline", size: "icon" }),
-          "absolute top-2 left-2 h-8 w-8 bg-background/90 backdrop-blur-sm"
+          "absolute top-2 left-2 h-8 w-8 bg-background/90 backdrop-blur-sm opacity-100 transition-opacity sm:opacity-0 sm:group-hover:opacity-100"
         )}
       >
         <Icons.zoomIn className="h-4 w-4" />
