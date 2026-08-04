@@ -79,13 +79,20 @@ const NotebookCover = React.forwardRef<HTMLDivElement, NotebookCoverProps>(
   ({ title, subtitle }, ref) => (
     <div
       ref={ref}
-      className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-neutral-800 via-neutral-950 to-black px-8 text-center shadow-[inset_0_0_40px_rgba(0,0,0,0.6)]"
+      className="relative flex h-full w-full flex-col items-center justify-center gap-3 overflow-hidden bg-gradient-to-br from-neutral-800 via-neutral-950 to-black px-8 pt-10 text-center shadow-[inset_0_0_40px_rgba(0,0,0,0.6)] sm:pt-16"
     >
-      <p className="font-serif text-lg uppercase tracking-[0.35em] text-amber-100/90 sm:text-2xl">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.15] mix-blend-screen"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.6' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        }}
+      />
+      <p className="relative font-serif text-lg uppercase tracking-[0.35em] text-amber-100/90 sm:text-2xl">
         {title}
       </p>
       {subtitle && (
-        <p className="text-sm uppercase tracking-[0.3em] text-amber-100/60 sm:text-base">
+        <p className="relative font-serif text-lg uppercase tracking-[0.35em] text-amber-100/90 sm:text-2xl">
           {subtitle}
         </p>
       )}
