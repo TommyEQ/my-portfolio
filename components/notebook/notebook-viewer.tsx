@@ -70,12 +70,43 @@ const NotebookPage = React.forwardRef<HTMLDivElement, NotebookPageProps>(
 );
 NotebookPage.displayName = "NotebookPage";
 
-interface NotebookViewerProps {
-  pages: NotebookPageEntry[];
+interface NotebookCoverProps {
+  title: string;
+  subtitle?: string;
 }
 
-export default function NotebookViewer({ pages }: NotebookViewerProps) {
+const NotebookCover = React.forwardRef<HTMLDivElement, NotebookCoverProps>(
+  ({ title, subtitle }, ref) => (
+    <div
+      ref={ref}
+      className="flex h-full w-full flex-col items-center justify-center gap-3 bg-gradient-to-br from-neutral-800 via-neutral-950 to-black px-8 text-center shadow-[inset_0_0_40px_rgba(0,0,0,0.6)]"
+    >
+      <p className="font-serif text-lg uppercase tracking-[0.35em] text-amber-100/90 sm:text-2xl">
+        {title}
+      </p>
+      {subtitle && (
+        <p className="text-sm uppercase tracking-[0.3em] text-amber-100/60 sm:text-base">
+          {subtitle}
+        </p>
+      )}
+    </div>
+  )
+);
+NotebookCover.displayName = "NotebookCover";
+
+interface NotebookViewerProps {
+  pages: NotebookPageEntry[];
+  coverTitle?: string;
+  coverSubtitle?: string;
+}
+
+export default function NotebookViewer({
+  pages,
+  coverTitle = "Engineering Notebook",
+  coverSubtitle,
+}: NotebookViewerProps) {
   const flipBookRef = useRef<{ pageFlip: () => any } | null>(null);
+  // Flipbook-internal index: 0 = cover, 1..pages.length = content pages.
   const [currentPage, setCurrentPage] = useState(0);
   const [zoomedIndex, setZoomedIndex] = useState<number | null>(null);
 
@@ -85,9 +116,11 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
 
   // Instant jump, no flip animation — used by the slider so dragging
   // through many pages quickly doesn't queue up animations and lag.
-  const jumpToPage = useCallback((index: number) => {
-    flipBookRef.current?.pageFlip()?.turnToPage(index);
-    setCurrentPage(index);
+  // Takes a content-page index (0-based, excluding the cover).
+  const jumpToPage = useCallback((contentIndex: number) => {
+    const flipIndex = contentIndex + 1;
+    flipBookRef.current?.pageFlip()?.turnToPage(flipIndex);
+    setCurrentPage(flipIndex);
   }, []);
 
   const flipPrev = useCallback(() => {
@@ -109,6 +142,8 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
   }, [jumpToPage]);
 
   const zoomedPage = zoomedIndex !== null ? pages[zoomedIndex] : null;
+  const isCover = currentPage === 0;
+  const sliderValue = Math.max(0, currentPage - 1);
 
   if (pages.length === 0) {
     return (
@@ -121,6 +156,9 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
   return (
     <div className="flex flex-col items-center gap-6">
       <div className="flex w-full max-w-6xl items-center justify-center gap-3 sm:gap-6">
+        {/* Desktop: arrows sit beside the book, which needs real flex width to
+            stretch into. Hidden on mobile — there isn't room beside the book
+            there, so a mobile-only overlay pair is used instead below. */}
         <button
           type="button"
           onClick={flipPrev}
@@ -128,22 +166,22 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
           aria-label="Previous page"
           className={cn(
             buttonVariants({ variant: "outline", size: "icon" }),
-            "shrink-0"
+            "hidden shrink-0 sm:inline-flex"
           )}
         >
           <Icons.chevronLeft className="h-4 w-4" />
         </button>
 
-        <div className="flex min-w-0 flex-1 justify-center">
+        <div className="relative flex min-w-0 flex-1 justify-center">
           <HTMLFlipBook
             width={PAGE_WIDTH}
             height={PAGE_HEIGHT}
             size="stretch"
-            minWidth={260}
+            minWidth={180}
             maxWidth={PAGE_WIDTH}
-            minHeight={318}
+            minHeight={220}
             maxHeight={PAGE_HEIGHT}
-            showCover={false}
+            showCover={true}
             mobileScrollSupport={true}
             onFlip={handleFlip}
             className="mx-auto"
@@ -162,6 +200,7 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
             disableFlipByClick={true}
             ref={flipBookRef}
           >
+            <NotebookCover title={coverTitle} subtitle={coverSubtitle} />
             {pages.map((page, index) => (
               <NotebookPage
                 key={page.image}
@@ -171,16 +210,42 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
               />
             ))}
           </HTMLFlipBook>
+
+          {/* Mobile-only overlay controls */}
+          <button
+            type="button"
+            onClick={flipPrev}
+            disabled={currentPage === 0}
+            aria-label="Previous page"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "icon" }),
+              "absolute left-1 top-1/2 z-10 -translate-y-1/2 bg-background/85 backdrop-blur-sm sm:hidden"
+            )}
+          >
+            <Icons.chevronLeft className="h-4 w-4" />
+          </button>
+          <button
+            type="button"
+            onClick={flipNext}
+            disabled={currentPage === pages.length}
+            aria-label="Next page"
+            className={cn(
+              buttonVariants({ variant: "outline", size: "icon" }),
+              "absolute right-1 top-1/2 z-10 -translate-y-1/2 bg-background/85 backdrop-blur-sm sm:hidden"
+            )}
+          >
+            <Icons.chevronRight className="h-4 w-4" />
+          </button>
         </div>
 
         <button
           type="button"
           onClick={flipNext}
-          disabled={currentPage === pages.length - 1}
+          disabled={currentPage === pages.length}
           aria-label="Next page"
           className={cn(
             buttonVariants({ variant: "outline", size: "icon" }),
-            "shrink-0"
+            "hidden shrink-0 sm:inline-flex"
           )}
         >
           <Icons.chevronRight className="h-4 w-4" />
@@ -192,13 +257,13 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
           type="range"
           min={0}
           max={pages.length - 1}
-          value={currentPage}
+          value={sliderValue}
           onChange={(e) => jumpToPage(Number(e.target.value))}
           className="w-full accent-primary"
           aria-label="Jump to page"
         />
         <span className="text-xs text-muted-foreground">
-          Page {currentPage + 1} of {pages.length}
+          {isCover ? "Cover" : `Page ${currentPage} of ${pages.length}`}
         </span>
       </div>
 
@@ -209,7 +274,19 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
           </DialogTitle>
           {zoomedPage && zoomedIndex !== null && (
             <>
-              <div className="relative flex items-center justify-center gap-2 sm:gap-4">
+              <div
+                className="relative mx-auto w-full"
+                style={{ aspectRatio: `${PAGE_WIDTH}/${PAGE_HEIGHT}`, maxHeight: "80vh" }}
+              >
+                <Image
+                  src={zoomedPage.image}
+                  alt={zoomedPage.caption ?? `Notebook page ${zoomedIndex + 1}`}
+                  fill
+                  sizes="92vw"
+                  className="object-contain"
+                  priority
+                />
+
                 <button
                   type="button"
                   onClick={() => setZoomedIndex((i) => Math.max(0, (i ?? 0) - 1))}
@@ -217,25 +294,11 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
                   aria-label="Previous page"
                   className={cn(
                     buttonVariants({ variant: "outline", size: "icon" }),
-                    "shrink-0"
+                    "absolute left-1 top-1/2 z-10 -translate-y-1/2 bg-background/85 backdrop-blur-sm sm:left-3"
                   )}
                 >
                   <Icons.chevronLeft className="h-4 w-4" />
                 </button>
-
-                <div
-                  className="relative w-full min-w-0"
-                  style={{ aspectRatio: `${PAGE_WIDTH}/${PAGE_HEIGHT}`, maxHeight: "80vh" }}
-                >
-                  <Image
-                    src={zoomedPage.image}
-                    alt={zoomedPage.caption ?? `Notebook page ${zoomedIndex + 1}`}
-                    fill
-                    sizes="92vw"
-                    className="object-contain"
-                    priority
-                  />
-                </div>
 
                 <button
                   type="button"
@@ -246,7 +309,7 @@ export default function NotebookViewer({ pages }: NotebookViewerProps) {
                   aria-label="Next page"
                   className={cn(
                     buttonVariants({ variant: "outline", size: "icon" }),
-                    "shrink-0"
+                    "absolute right-1 top-1/2 z-10 -translate-y-1/2 bg-background/85 backdrop-blur-sm sm:right-3"
                   )}
                 >
                   <Icons.chevronRight className="h-4 w-4" />

@@ -10,6 +10,8 @@ export interface NotebookPageEntry {
 export interface NotebookEntry {
   id: string;
   title: string;
+  coverTitle: string;
+  coverSubtitle?: string;
   pages: NotebookPageEntry[];
 }
 
@@ -23,6 +25,8 @@ export const notebooks: NotebookEntry[] = [
   {
     id: "book-1",
     title: "Notebook 1",
+    coverTitle: "Engineering Notebook",
+    coverSubtitle: "№ 1",
     pages: BOOK_1_PAGE_NUMBERS.map((n) => ({
       image: `/notebook/book-1/page${n}.webp`,
     })),
@@ -31,6 +35,8 @@ export const notebooks: NotebookEntry[] = [
   // {
   //   id: "book-2",
   //   title: "Notebook 2",
+  //   coverTitle: "Engineering Notebook",
+  //   coverSubtitle: "№ 2",
   //   pages: [
   //     { image: "/notebook/book-2/page1.jpg" },
   //   ],

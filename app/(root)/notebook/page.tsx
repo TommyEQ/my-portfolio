@@ -21,7 +21,13 @@ export default function NotebookPage() {
   const tabItems = notebooks.map((notebook) => ({
     value: notebook.id,
     label: notebook.title,
-    content: <NotebookViewer pages={notebook.pages} />,
+    content: (
+      <NotebookViewer
+        pages={notebook.pages}
+        coverTitle={notebook.coverTitle}
+        coverSubtitle={notebook.coverSubtitle}
+      />
+    ),
   }));
 
   return (
