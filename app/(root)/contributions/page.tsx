@@ -17,10 +17,10 @@ export default function AboutPage() {
       <div className="w-full mb-10 text-left text-lg leading-relaxed px-4">
         <h2 className="text-2xl font-bold mb-4">Hello, I’m Tomas!</h2>
         <p>
-          I’m a mechanical engineer passionate about prototyping and product development. I currently work at Garmin in the Marine Department, where I contribute to the design, testing, and validation of GPS and marine electronics products.
+          I’m a mechanical engineer passionate about prototyping and product development. I currently work at Agility Robotics on the Mechanical Engineering team, where I help build humanoid robots for warehouse environments.
         </p>
         <p className="mt-4">
-          Previously, I worked on projects ranging from designing a multi-material prosthetic hand at Penn State to developing structural components for autonomous vehicles at Carnegie Robotics. I enjoy combining CAD, simulation, and rapid prototyping to bring innovative designs to life.
+          Previously, I worked at Garmin in the Marine Department on GPS and marine electronics products, designed a multi-material prosthetic hand at Penn State, and developed structural components for autonomous vehicles at Carnegie Robotics. I enjoy combining CAD, simulation, and rapid prototyping to bring innovative designs to life.
         </p>
         <p className="mt-4">
           Outside of engineering, I love reading, listening to jazz, and traveling. I’m always excited to learn new tools and techniques, and I’d be happy to connect!
