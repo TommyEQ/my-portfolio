@@ -7,6 +7,7 @@ import SkillsPreview from "@/components/skills/skillspreview";
 import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
+import { HeroPhotoStack } from "@/components/common/hero-photo-stack";
 import { Icons } from "@/components/common/icons";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
@@ -47,72 +48,75 @@ export default function IndexPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
       />
 
-      <section className="space-y-6 pb-8 pt-6 mb-0 md:pb-12 md:py-20 lg:py-32 h-screen flex items-center">
-        <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center -mt-20">
-          <Image
-            src={profileImg}
-            height={100}
-            width={100}
-            sizes="100vw"
-            className="bg-primary rounded-full mb-0 h-auto md:mb-2 w-[60%] max-w-[16rem] border-8 border-primary"
-            alt="Tomas Quesada - Mechanical Engineer Portfolio"
-            priority
-          />
-          <AnimatedText
-            as="h1"
-            delay={0.2}
-            className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl"
-          >
-            Tomas Quesada
-          </AnimatedText>
-          <AnimatedText
-            as="h3"
-            delay={0.35}
-            className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
-          >
-            Mechanical Engineer
-          </AnimatedText>
-          <AnimatedText delay={0.45} className="mt-4 max-w-[42rem] text-center">
-            <p className="leading-normal text-muted-foreground text-sm sm:text-base">
-              Welcome to my portfolio! Here you&apos;ll find a selection of my mechanical engineering projects, highlighting my experience in design, analysis, and hands-on prototyping.
-            </p>
-          </AnimatedText>
+      <section className="py-10 md:py-16 lg:py-20">
+        <div className="container flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          <div className="flex flex-col gap-4 lg:max-w-xl">
+            <div className="flex items-center gap-4">
+              <Image
+                src={profileImg}
+                height={80}
+                width={80}
+                sizes="80px"
+                className="h-16 w-16 shrink-0 rounded-full border-4 border-primary object-cover md:h-20 md:w-20"
+                alt="Tomas Quesada - Mechanical Engineer Portfolio"
+                priority
+              />
+              <AnimatedText
+                as="h1"
+                delay={0.2}
+                className="font-heading text-3xl sm:text-4xl md:text-5xl"
+              >
+                Tomas Quesada
+              </AnimatedText>
+            </div>
+            <AnimatedText
+              as="h3"
+              delay={0.35}
+              className="font-heading text-lg sm:text-xl"
+            >
+              Mechanical Engineer
+            </AnimatedText>
+            <AnimatedText delay={0.45} className="max-w-[46ch]">
+              <p className="leading-normal text-muted-foreground text-sm sm:text-base">
+                Welcome to my portfolio! Here you&apos;ll find a selection of my mechanical engineering projects, highlighting my experience in design, analysis, and hands-on prototyping.
+              </p>
+            </AnimatedText>
 
-          <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
-            <AnimatedText delay={0.55}>
-              <Link
-                href={siteConfig.links.linkedin}
-                target="_blank"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
-                aria-label="View Tomas Quesada's LinkedIn profile"
-              >
-                <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
-              </Link>
-            </AnimatedText>
-            <AnimatedText delay={0.6}>
-              <Link
-                href={"/contact"}
-                rel="noreferrer"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
-                aria-label="Contact Tomas Quesada"
-              >
-                <Icons.contact className="w-4 h-4 mr-2" /> Contact
-              </Link>
-            </AnimatedText>
-            <AnimatedText delay={0.65}>
-              <Link
-                href="/resume.pdf"
-                target="_blank"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
-                aria-label="View Tomas Quesada's Resume"
-              >
-                Resume
-              </Link>
-            </AnimatedText>
+            <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+              <AnimatedText delay={0.55}>
+                <Link
+                  href={siteConfig.links.linkedin}
+                  target="_blank"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
+                  aria-label="View Tomas Quesada's LinkedIn profile"
+                >
+                  <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
+                </Link>
+              </AnimatedText>
+              <AnimatedText delay={0.6}>
+                <Link
+                  href={"/contact"}
+                  rel="noreferrer"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
+                  aria-label="Contact Tomas Quesada"
+                >
+                  <Icons.contact className="w-4 h-4 mr-2" /> Contact
+                </Link>
+              </AnimatedText>
+              <AnimatedText delay={0.65}>
+                <Link
+                  href="/resume.pdf"
+                  target="_blank"
+                  className={cn(buttonVariants({ variant: "outline", size: "lg" }), "border-primary text-primary")}
+                  aria-label="View Tomas Quesada's Resume"
+                >
+                  Resume
+                </Link>
+              </AnimatedText>
+            </div>
           </div>
-          <AnimatedText delay={0.75}>
-            <Icons.chevronDown className="h-6 w-6 mt-10" />
-          </AnimatedText>
+
+          <HeroPhotoStack className="lg:shrink-0" />
         </div>
       </section>
 

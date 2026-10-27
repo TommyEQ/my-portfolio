@@ -78,13 +78,13 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({ experience }) => {
             {experience.skills.slice(0, 2).map((skill, index) => (
               <span
                 key={index}
-                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground"
+                className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-foreground/80"
               >
                 {skill}
               </span>
             ))}
             {experience.skills.length > 2 && (
-              <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-muted-foreground">
+              <span className="inline-flex items-center px-2 py-1 rounded-md text-xs font-medium bg-muted text-foreground/80">
                 +{experience.skills.length - 2} more
               </span>
             )}
