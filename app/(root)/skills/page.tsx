@@ -24,9 +24,9 @@ export default function SkillsPage() {
       description={pagesConfig.skills.description}
     >
       {Object.entries(skillsByCategory).map(([category, skills]) => (
-        <section key={category} style={{ marginBottom: "2rem" }}>
-          <h2 style={{ fontSize: "1.25rem", fontWeight: "bold", marginBottom: "0.5rem" }}>{category}</h2>
-          <hr style={{ marginBottom: "1.5rem" }} />
+        <section key={category} className="mb-8">
+          <h2 className="font-heading text-xl font-bold mb-2">{category}</h2>
+          <hr className="mb-6" />
           <SkillsCard skills={skills} />
         </section>
       ))}

@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+import { AnimatedSection } from "@/components/common/animated-section";
+
 export const metadata: Metadata = {
-  title: "Prosthetic Hand | Tomas Quesada",
+  title: "Prosthetic Hand",
   description:
     "Groove-based 3D printed prosthetic hand using TPU soft robotics — validated through ANSYS FEA, 250,000-cycle fatigue testing, and fingertip force benchmarking.",
 };
@@ -56,6 +58,7 @@ export default function ProstheticHandPage() {
             src="/projects/hand/hand2.webp"
             alt="Prosthetic hand — front view"
             fill
+            sizes="(max-width: 640px) 100vw, 66vw"
             className="object-cover"
             priority
           />
@@ -63,19 +66,19 @@ export default function ProstheticHandPage() {
       </div>
 
       {/* Stats row */}
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
+      <AnimatedSection direction="up" className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-10">
         {stats.map((stat) => (
           <div key={stat.label} className="bg-secondary rounded-lg p-4">
             <div className="text-xl font-semibold text-foreground">{stat.value}</div>
             <div className="text-xs text-muted-foreground mt-1">{stat.label}</div>
           </div>
         ))}
-      </div>
+      </AnimatedSection>
 
       <hr className="border-border mb-8" />
 
       {/* Overview */}
-      <section className="mb-10">
+      <AnimatedSection direction="up" className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-3">Overview</h2>
         <p className="text-muted-foreground leading-relaxed mb-4">
           This project designed and fabricated a fully functional prosthetic hand using TPU-based 3D
@@ -93,12 +96,12 @@ export default function ProstheticHandPage() {
             </li>
           ))}
         </ul>
-      </section>
+      </AnimatedSection>
 
       <hr className="border-border mb-8" />
 
       {/* Design Process */}
-      <section className="mb-10">
+      <AnimatedSection direction="up" className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Design process</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
 
@@ -109,6 +112,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/handscan.png"
                 alt="3D hand scan used as anatomical reference"
                 fill
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover object-top"
               />
             </div>
@@ -124,6 +128,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/handcad1.jpg"
                 alt="SolidWorks exploded assembly view"
                 fill
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -133,12 +138,12 @@ export default function ProstheticHandPage() {
           </div>
 
         </div>
-      </section>
+      </AnimatedSection>
 
       <hr className="border-border mb-8" />
 
       {/* Research Data */}
-      <section className="mb-10">
+      <AnimatedSection direction="up" className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Research data</h2>
 
         {/* FEA comparison */}
@@ -155,6 +160,7 @@ export default function ProstheticHandPage() {
                   src="/projects/hand/groovefea.png"
                   alt="FEA Von Mises stress — grooved finger"
                   fill
+                  sizes="50vw"
                   className="object-cover"
                 />
               </div>
@@ -168,6 +174,7 @@ export default function ProstheticHandPage() {
                   src="/projects/hand/nongroovefea.png"
                   alt="FEA Von Mises stress — non-grooved finger"
                   fill
+                  sizes="50vw"
                   className="object-cover"
                 />
               </div>
@@ -186,6 +193,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/handdata1.webp"
                 alt="Response surface method — Von Mises stress FEA optimization"
                 fill
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-contain p-2"
               />
             </div>
@@ -199,6 +207,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/handdata2.webp"
                 alt="Force transmission: groove vs non-groove at 90° and 135°"
                 fill
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-contain p-2"
               />
             </div>
@@ -207,12 +216,12 @@ export default function ProstheticHandPage() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       <hr className="border-border mb-8" />
 
       {/* Design & Build */}
-      <section className="mb-10">
+      <AnimatedSection direction="up" className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Design &amp; build</h2>
 
         {/* Two portrait studio shots side by side */}
@@ -223,6 +232,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/hand1.webp"
                 alt="Prosthetic hand front view"
                 fill
+                sizes="50vw"
                 className="object-cover object-top"
               />
             </div>
@@ -236,6 +246,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/hand2.webp"
                 alt="Prosthetic hand back view"
                 fill
+                sizes="50vw"
                 className="object-cover object-top"
               />
             </div>
@@ -252,6 +263,7 @@ export default function ProstheticHandPage() {
               src="/projects/hand/hand3.webp"
               alt="Palm internals showing motor layout comparison"
               fill
+              sizes="100vw"
               className="object-cover"
             />
           </div>
@@ -259,12 +271,12 @@ export default function ProstheticHandPage() {
             Palm internals — final motor layout (DC motors + servo thumb)
           </p>
         </div>
-      </section>
+      </AnimatedSection>
 
       <hr className="border-border mb-8" />
 
       {/* Grasping Tests */}
-      <section className="mb-10">
+      <AnimatedSection direction="up" className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Grasping tests</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           <div>
@@ -273,6 +285,7 @@ export default function ProstheticHandPage() {
                 src="/projects/hand/hand4.webp"
                 alt="Prosthetic hand grasping a cylindrical object"
                 fill
+                sizes="(max-width: 640px) 100vw, 50vw"
                 className="object-cover"
               />
             </div>
@@ -296,18 +309,19 @@ export default function ProstheticHandPage() {
             </p>
           </div>
         </div>
-      </section>
+      </AnimatedSection>
 
       <hr className="border-border mb-8" />
 
       {/* Electronics */}
-      <section className="mb-10">
+      <AnimatedSection direction="up" className="mb-10">
         <h2 className="text-lg font-semibold text-foreground mb-4">Electronics &amp; control</h2>
         <div className="relative w-full rounded-lg overflow-hidden mb-2" style={{ aspectRatio: "16/9" }}>
           <Image
             src="/projects/hand/hand6.webp"
             alt="Arduino-based motor control board"
             fill
+            sizes="100vw"
             className="object-cover"
           />
         </div>
@@ -315,10 +329,10 @@ export default function ProstheticHandPage() {
           Arduino Uno, L298N motor drivers, DC-DC buck converter, and manual potentiometer
           control — all mounted on a custom 3D-printed panel
         </p>
-      </section>
+      </AnimatedSection>
 
       {/* Tools card */}
-      <div className="bg-secondary rounded-lg p-5 mb-10">
+      <AnimatedSection direction="up" className="bg-secondary rounded-lg p-5 mb-10">
         <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">
           Tools &amp; methods
         </p>
@@ -327,7 +341,7 @@ export default function ProstheticHandPage() {
           &amp; PLA &middot; FEA &middot; Response Surface Method &middot; Mooney-Rivlin
           Hyperelastic Modeling
         </p>
-      </div>
+      </AnimatedSection>
 
       <hr className="border-border mb-6" />
 

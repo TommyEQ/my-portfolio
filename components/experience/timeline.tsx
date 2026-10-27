@@ -58,7 +58,7 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
           delay={0.1 * (index + 1)}
           direction="up"
         >
-          <div className="w-full p-4 sm:p-6 bg-background border border-border rounded-lg transition-all duration-300">
+          <div className="w-full p-4 sm:p-6 bg-background border border-border rounded-lg">
             <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
               <div className="flex items-start gap-4 flex-1 min-w-0">
                 {experience.logo && (
@@ -123,16 +123,15 @@ const Timeline: React.FC<TimelineProps> = ({ experiences }) => {
         </AnimatedSection>
       ))}
 
-    {/* PDF Preview BELOW the experience cards */}
-    <iframe
-      src="/resume.pdf"
-      width="100%"
-      height="600"
-      style={{ border: "1px solid #ccc", marginTop: "1rem" }}
-      title="Resume PDF Preview"
-    />
-  </div>
-); // closes the return
-}   // <-- Add this line to close the component
+      <iframe
+        src="/resume.pdf"
+        width="100%"
+        height="600"
+        style={{ border: "1px solid #ccc", marginTop: "1rem" }}
+        title="Resume PDF Preview"
+      />
+    </div>
+  );
+};
 
 export default Timeline;

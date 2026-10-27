@@ -69,66 +69,60 @@ export default function ExperienceDetailPage({
       value: "summary",
       label: "Summary",
       content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Role Summary
-            </h3>
-            <ul className="space-y-3">
-              {experience.description.map((desc, idx) => (
-                <li
-                  key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {desc}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            Role Summary
+          </h3>
+          <ul className="space-y-3">
+            {experience.description.map((desc, idx) => (
+              <li
+                key={idx}
+                className="text-base leading-relaxed flex items-start gap-3"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                {desc}
+              </li>
+            ))}
+          </ul>
+        </div>
       ),
     },
     {
       value: "achievements",
       label: "Achievements",
       content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Key Achievements
-            </h3>
-            <ul className="space-y-3">
-              {experience.achievements.map((achievement, idx) => (
-                <li
-                  key={idx}
-                  className="text-base leading-relaxed flex items-start gap-3"
-                >
-                  <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                  {achievement}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            Key Achievements
+          </h3>
+          <ul className="space-y-3">
+            {experience.achievements.map((achievement, idx) => (
+              <li
+                key={idx}
+                className="text-base leading-relaxed flex items-start gap-3"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
+                {achievement}
+              </li>
+            ))}
+          </ul>
+        </div>
       ),
     },
     {
       value: "skills",
       label: "Skills",
       content: (
-        <AnimatedSection delay={0.3}>
-          <div>
-            <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
-              Technologies & Skills
-            </h3>
-            <ChipContainer textArr={experience.skills} />
-            <p className="mt-4 text-sm text-muted-foreground">
-              These are the primary technologies and skills utilized during my
-              time at {experience.company}.
-            </p>
-          </div>
-        </AnimatedSection>
+        <div>
+          <h3 className="font-semibold mb-4 text-sm uppercase tracking-wide text-muted-foreground">
+            Technologies & Skills
+          </h3>
+          <ChipContainer textArr={experience.skills} />
+          <p className="mt-4 text-sm text-muted-foreground">
+            These are the primary technologies and skills utilized during my
+            time at {experience.company}.
+          </p>
+        </div>
       ),
     },
   ];

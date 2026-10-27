@@ -8,12 +8,10 @@ import { AnimatedSection } from "@/components/common/animated-section";
 import { AnimatedText } from "@/components/common/animated-text";
 import { ClientPageWrapper } from "@/components/common/client-page-wrapper";
 import { Icons } from "@/components/common/icons";
-import ContributionCard from "@/components/contributions/contribution-card";
 import ExperienceCard from "@/components/experience/experience-card";
 import ProjectCard from "@/components/projects/project-card";
 import SkillsCard from "@/components/skills/skills-card";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { featuredContributions } from "@/config/contributions";
 import { experiences } from "@/config/experience";
 import { pagesConfig } from "@/config/pages";
 import { featuredProjects } from "@/config/projects";
@@ -69,19 +67,19 @@ export default function IndexPage() {
           </AnimatedText>
           <AnimatedText
             as="h3"
-            delay={0.4}
+            delay={0.35}
             className="font-heading text-base sm:text-xl md:text-xl lg:text-2xl"
           >
             Mechanical Engineer
           </AnimatedText>
-          <div className="mt-4 max-w-[42rem] text-center">
+          <AnimatedText delay={0.45} className="mt-4 max-w-[42rem] text-center">
             <p className="leading-normal text-muted-foreground text-sm sm:text-base">
               Welcome to my portfolio! Here you&apos;ll find a selection of my mechanical engineering projects, highlighting my experience in design, analysis, and hands-on prototyping.
             </p>
-          </div>
+          </AnimatedText>
 
           <div className="flex flex-col mt-10 items-center justify-center sm:flex-row sm:space-x-4 gap-3">
-            <AnimatedText delay={0.6}>
+            <AnimatedText delay={0.55}>
               <Link
                 href={siteConfig.links.linkedin}
                 target="_blank"
@@ -91,7 +89,7 @@ export default function IndexPage() {
                 <Icons.linkedin className="w-4 h-4 mr-2" /> Linkedin
               </Link>
             </AnimatedText>
-            <AnimatedText delay={0.8}>
+            <AnimatedText delay={0.6}>
               <Link
                 href={"/contact"}
                 rel="noreferrer"
@@ -101,7 +99,7 @@ export default function IndexPage() {
                 <Icons.contact className="w-4 h-4 mr-2" /> Contact
               </Link>
             </AnimatedText>
-            <AnimatedText delay={1.0}>
+            <AnimatedText delay={0.65}>
               <Link
                 href="/resume.pdf"
                 target="_blank"
@@ -112,7 +110,7 @@ export default function IndexPage() {
               </Link>
             </AnimatedText>
           </div>
-          <AnimatedText delay={1.2}>
+          <AnimatedText delay={0.75}>
             <Icons.chevronDown className="h-6 w-6 mt-10" />
           </AnimatedText>
         </div>
